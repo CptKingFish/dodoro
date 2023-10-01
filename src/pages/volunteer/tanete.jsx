@@ -82,7 +82,7 @@ export default function VolunteerTanete() {
             </nav>
 
             <div className="mt-4">
-              <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <h1 className="text-3xl font-bold tracking-tight text-yellow-900 sm:text-4xl">
                 {product.name}
               </h1>
             </div>

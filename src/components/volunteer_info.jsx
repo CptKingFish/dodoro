@@ -30,30 +30,33 @@ export default function VolunteerInfo() {
             <dt className="flex-none">
               <span className="sr-only">Due date</span>
               <CalendarDaysIcon
-                className="h-6 w-5  text-gray-400"
+                className="h-6 w-5  text-yellow-700"
                 aria-hidden="true"
               />
             </dt>
-            <dd className="leading-6 ">
+            <dd className="leading-6 font-semibold">
               <time dateTime="2023-01-31">January 31, 2023</time>
             </dd>
           </div>
           <div className="mt-4 flex w-full flex-none gap-x-4 px-6">
             <dt className="flex-none">
               <span className="sr-only">Status</span>
-              <ClockIcon className="h-6 w-5 text-gray-400" aria-hidden="true" />
+              <ClockIcon
+                className="h-6 w-5 text-yellow-700"
+                aria-hidden="true"
+              />
             </dt>
-            <dd className="leading-6 ">7:30AM - 8:00PM</dd>
+            <dd className="leading-6 font-semibold">7:30AM - 8:00PM</dd>
           </div>
           <div className="mt-4 mb-4 flex w-full flex-none gap-x-4 px-6">
             <dt className="flex-none">
               <span className="sr-only">Status</span>
               <MapPinIcon
-                className="h-6 w-5 text-gray-400"
+                className="h-6 w-5 text-yellow-700"
                 aria-hidden="true"
               />
             </dt>
-            <dd className="leading-6 ">Tanete, Maros</dd>
+            <dd className="leading-6 font-semibold">Tanete, Maros</dd>
           </div>
         </dl>
       </div>

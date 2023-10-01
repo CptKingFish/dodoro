@@ -12,8 +12,8 @@ export default function Contact() {
                   Get in touch
                 </h2>
                 <p className="mt-4 leading-7 text-gray-600">
-                  Quam nunc nunc eu sed. Sed rhoncus quis ultricies ac
-                  pellentesque.
+                  Feel free to contact us if you have any more further questions
+                  or would like to make a material donation.
                 </p>
               </div>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
@@ -26,7 +26,7 @@ export default function Contact() {
                       <dt className="sr-only">Email</dt>
                       <dd>
                         <a
-                          className="font-semibold text-indigo-600"
+                          className="font-semibold text-yellow-600"
                           href="mailto:collaborate@example.com"
                         >
                           collaborate@example.com
@@ -48,7 +48,7 @@ export default function Contact() {
                       <dt className="sr-only">Email</dt>
                       <dd>
                         <a
-                          className="font-semibold text-indigo-600"
+                          className="font-semibold text-yellow-600"
                           href="mailto:press@example.com"
                         >
                           press@example.com
@@ -70,7 +70,7 @@ export default function Contact() {
                       <dt className="sr-only">Email</dt>
                       <dd>
                         <a
-                          className="font-semibold text-indigo-600"
+                          className="font-semibold text-yellow-600"
                           href="mailto:careers@example.com"
                         >
                           careers@example.com
@@ -92,7 +92,7 @@ export default function Contact() {
                       <dt className="sr-only">Email</dt>
                       <dd>
                         <a
-                          className="font-semibold text-indigo-600"
+                          className="font-semibold text-yellow-600"
                           href="mailto:hello@example.com"
                         >
                           hello@example.com
@@ -113,8 +113,8 @@ export default function Contact() {
                   Locations
                 </h2>
                 <p className="mt-4 leading-7 text-gray-600">
-                  Consequat sunt cillum cillum elit sint. Qui occaecat nisi in
-                  ipsum commodo.
+                  You can visit us at multiple locations in Singapore and
+                  Indonesia.
                 </p>
               </div>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">

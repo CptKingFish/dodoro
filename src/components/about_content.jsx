@@ -22,10 +22,10 @@ export default function AboutContent() {
         </div>
         <div className="px-6 lg:contents">
           <div className="mx-auto max-w-2xl pb-24 pt-16 sm:pb-32 sm:pt-20 lg:ml-8 lg:mr-0 lg:w-full lg:max-w-lg lg:flex-none lg:pt-32 xl:w-1/2">
-            <p className="text-base font-semibold leading-7 text-indigo-600">
+            <p className="text-base font-semibold leading-7 text-yellow-400">
               About
             </p>
-            <span className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <span className="mt-2 text-3xl font-bold tracking-tight text-yellow-900 sm:text-4xl">
               What is Dodol?
             </span>
             <p className="mt-6 text-xl leading-8 text-gray-700">
@@ -36,7 +36,7 @@ export default function AboutContent() {
               weddings and festivals.
             </p>
             <div className="mt-10 max-w-xl text-base leading-7 text-gray-700 lg:max-w-none">
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">
+              <h2 className="mt-16 text-2xl font-bold tracking-tight text-yellow-900">
                 How is Dodol made?
               </h2>
               <p className="mt-6">
@@ -51,14 +51,14 @@ export default function AboutContent() {
                 4000 rupiah to 5000 rupiah.
               </p>
 
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">
+              <h2 className="mt-16 text-2xl font-bold tracking-tight text-yellow-900">
                 The cooking process
               </h2>
 
               <ul role="list" className="mt-8 space-y-8 text-gray-900">
                 <li className="flex gap-x-3">
                   <MoonIcon
-                    className="mt-1 h-5 w-5 flex-none text-indigo-600"
+                    className="mt-1 h-5 w-5 flex-none text-yellow-600"
                     aria-hidden="true"
                   />
                   <span>
@@ -71,7 +71,7 @@ export default function AboutContent() {
                 </li>
                 <li className="flex gap-x-3">
                   <HandRaisedIcon
-                    className="mt-1 h-5 w-5 flex-none text-indigo-600"
+                    className="mt-1 h-5 w-5 flex-none text-yellow-600"
                     aria-hidden="true"
                   />
                   <span>
@@ -84,7 +84,7 @@ export default function AboutContent() {
                 </li>
                 <li className="flex gap-x-3">
                   <FireIcon
-                    className="mt-1 h-5 w-5 flex-none text-indigo-600"
+                    className="mt-1 h-5 w-5 flex-none text-yellow-600"
                     aria-hidden="true"
                   />
                   <span>

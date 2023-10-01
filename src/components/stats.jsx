@@ -1,8 +1,30 @@
+import {
+  UserIcon,
+  UsersIcon,
+  CurrencyDollarIcon,
+  FlagIcon,
+} from "@heroicons/react/20/solid";
+
 const stats = [
-  { id: 1, name: "People making a difference", value: "8,000+" },
-  { id: 2, name: "Total funds raised", value: "3%" },
-  { id: 3, name: "Uptime guarantee", value: "99.9%" },
-  { id: 4, name: "Paid out to creators", value: "$70M" },
+  {
+    id: 1,
+    name: "People making a difference",
+    value: "8,000+",
+    icon: UserIcon,
+  },
+  {
+    id: 2,
+    name: "Total funds raised",
+    value: "30M IDR",
+    icon: CurrencyDollarIcon,
+  },
+  { id: 3, name: "Volunteer signups", value: "3,000+", icon: UsersIcon },
+  {
+    id: 4,
+    name: "Volunteer events held",
+    value: "123",
+    icon: FlagIcon,
+  },
 ];
 
 export default function Stats() {
@@ -31,7 +53,7 @@ export default function Stats() {
             Our track record
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Trusted by thousands of creators&nbsp;worldwide
+            Making a difference, one step at a time
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
@@ -47,7 +69,8 @@ export default function Stats() {
             >
               <dt className="text-md leading-6">{stat.name}</dt>
               <dd className="order-first text-3xl font-semibold tracking-tight flex flex-row items-center">
-                <svg
+                {<stat.icon className="w-10 h-10" />}
+                {/* <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -60,7 +83,7 @@ export default function Stats() {
                     strokeLinejoin="round"
                     d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
                   />
-                </svg>
+                </svg> */}
                 <span className="ms-5">{stat.value}</span>
               </dd>
             </div>

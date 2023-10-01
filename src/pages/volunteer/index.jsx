@@ -23,6 +23,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import Footer from "@/components/footer";
+import Link from "next/link";
 
 const navigation = {
   categories: [
@@ -222,7 +223,7 @@ export default function Volunteer() {
         <main className="pb-14 pt-16 sm:px-6 sm:pb-20 sm:pt-24 lg:px-8">
           <div className="mx-auto max-w-4xl">
             <div className="px-4 sm:px-0">
-              <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+              <h1 className="text-2xl font-bold tracking-tight text-yellow-900 sm:text-3xl">
                 Be a Volunteer
               </h1>
               <p className="mt-2 text-sm text-gray-500">
@@ -277,12 +278,12 @@ export default function Volunteer() {
                             </div>
                           </div>
                           <div className="mt-6 font-medium">
-                            <a
+                            <Link
                               href="/volunteer/tanete"
                               className="text-yellow-950 hover:text-yellow-600"
                             >
                               Learn More →
-                            </a>
+                            </Link>
                           </div>
                         </div>
                         <div className="ml-4 flex-shrink-0 sm:order-first sm:m-0 sm:mr-6">
