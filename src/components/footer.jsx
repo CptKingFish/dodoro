@@ -6,8 +6,6 @@ const navigation = {
     { name: "About", href: "/about" },
     { name: "Support", href: "/support" },
     { name: "Volunteer", href: "/volunteer" },
-    { name: "Shop", href: "/shop" },
-    { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" },
   ],
   social: [

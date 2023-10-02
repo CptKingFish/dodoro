@@ -11,7 +11,7 @@ const secondaryFeatures = [
   {
     name: "Support",
     description: "Support us by donating to a cause you are passionate about.",
-    href: "/donate",
+    href: "/support",
     icon: CircleStackIcon,
   },
   {
@@ -21,12 +21,12 @@ const secondaryFeatures = [
     href: "/volunteer",
     icon: UsersIcon,
   },
-  {
-    name: "Shop",
-    description: "100% of our profits goes to supporting more Dodol makers.",
-    href: "/shop",
-    icon: ShoppingBagIcon,
-  },
+  // {
+  //   name: "Shop",
+  //   description: "100% of our profits goes to supporting more Dodol makers.",
+  //   href: "/shop",
+  //   icon: ShoppingBagIcon,
+  // },
 ];
 
 export default function Actions() {
@@ -46,7 +46,7 @@ export default function Actions() {
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
             {secondaryFeatures.map((feature) => (
               <div key={feature.name} className="flex flex-col">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">

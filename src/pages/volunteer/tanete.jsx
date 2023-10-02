@@ -22,6 +22,7 @@ import { RadioGroup } from "@headlessui/react";
 import { ShieldCheckIcon } from "@heroicons/react/24/outline";
 import VolunteerInfo from "@/components/volunteer_info";
 import Footer from "@/components/footer";
+import BlogCardsSm from "@/components/blog_cards_sm";
 
 const reviews = { average: 4, totalCount: 1624 };
 
@@ -59,7 +60,7 @@ export default function VolunteerTanete() {
       <div className="bg-white">
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           {/* Product details */}
-          <div className="lg:max-w-lg lg:self-end">
+          <div className="lg:max-w-lg lg:self-start mt-4  ">
             <nav aria-label="Breadcrumb">
               <ol role="list" className="flex items-center space-x-2">
                 {product.breadcrumbs.map((breadcrumb, breadcrumbIdx) => (
@@ -131,10 +132,13 @@ export default function VolunteerTanete() {
                 className="h-full w-full object-cover object-center"
               />
             </div>
+            <div className="hidden lg:block mt-8">
+              <BlogCardsSm />
+            </div>
           </div>
 
           {/* Product form */}
-          <div className="mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
+          <div className="mt-5 sm:mt-0 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
             <section aria-labelledby="options-heading">
               <h2 id="options-heading" className="sr-only">
                 Product options
@@ -180,6 +184,9 @@ export default function VolunteerTanete() {
                   >
                     Volunteer Now
                   </button>
+                </div>
+                <div className="block lg:hidden mt-8">
+                  <BlogCardsSm />
                 </div>
                 <div className="mt-10 border-t border-gray-200 pt-10">
                   <h3 className="text-sm font-medium text-gray-900">Share</h3>

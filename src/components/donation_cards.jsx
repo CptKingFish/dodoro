@@ -10,7 +10,7 @@ const projects = [
     bgColor: "bg-pink-600",
   },
   {
-    name: "50,000IDR can feed Marce's family for a day.",
+    name: "50,000IDR can feed a Dodol maker's family for a day.",
     initials: "50,000",
     currency: "IDR",
     href: "#",

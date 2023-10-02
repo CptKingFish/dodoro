@@ -15,7 +15,7 @@ export default function AboutContent() {
           <div className="relative h-80 lg:-ml-8 lg:h-auto lg:w-full lg:grow xl:ml-0">
             <img
               className="absolute inset-0 h-full w-full bg-gray-50 object-cover"
-              src="making.png "
+              src="all.png "
               alt=""
             />
           </div>

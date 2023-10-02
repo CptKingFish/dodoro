@@ -307,7 +307,7 @@ export default function Volunteer() {
                   <div className="w-full border-t border-gray-300" />
                 </div>
               </div>
-              <div className="space-y-16 sm:space-y-24">
+              <div className="space-y-16 sm:space-y-24 mt-10 sm:mt-0">
                 <div>
                   <div className="mt-6 flow-root px-4 sm:mt-10 sm:px-0 ">
                     <div className="-my-6 divide-y divide-gray-200 sm:-my-10">
@@ -350,7 +350,7 @@ export default function Volunteer() {
                               </div>
                             </div>
                           </div>
-                          <div className="flex space-x-2">
+                          <div className="flex space-x-2 mt-5 lg:mt-0">
                             <CheckIcon
                               className="h-6 w-6 flex-none text-green-500"
                               aria-hidden="true"

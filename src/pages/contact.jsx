@@ -19,18 +19,15 @@ export default function Contact() {
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
                 <div className="rounded-2xl bg-gray-50 p-10">
                   <h3 className="text-base font-semibold leading-7 text-gray-900">
-                    Collaborate
+                    Facebook
                   </h3>
                   <dl className="mt-3 space-y-1 text-sm leading-6 text-gray-600">
                     <div>
                       <dt className="sr-only">Email</dt>
                       <dd>
-                        <a
-                          className="font-semibold text-yellow-600"
-                          href="mailto:collaborate@example.com"
-                        >
-                          collaborate@example.com
-                        </a>
+                        <span className="font-semibold text-yellow-600">
+                          @mace&apos;s Dodoro
+                        </span>
                       </dd>
                     </div>
                     <div className="mt-1">
@@ -41,18 +38,15 @@ export default function Contact() {
                 </div>
                 <div className="rounded-2xl bg-gray-50 p-10">
                   <h3 className="text-base font-semibold leading-7 text-gray-900">
-                    Press
+                    Instagram
                   </h3>
                   <dl className="mt-3 space-y-1 text-sm leading-6 text-gray-600">
                     <div>
                       <dt className="sr-only">Email</dt>
                       <dd>
-                        <a
-                          className="font-semibold text-yellow-600"
-                          href="mailto:press@example.com"
-                        >
-                          press@example.com
-                        </a>
+                        <span className="font-semibold text-yellow-600">
+                          @maces.dodoro
+                        </span>
                       </dd>
                     </div>
                     <div className="mt-1">
@@ -113,8 +107,7 @@ export default function Contact() {
                   Locations
                 </h2>
                 <p className="mt-4 leading-7 text-gray-600">
-                  You can visit us at multiple locations in Singapore and
-                  Indonesia.
+                  You can visit us at locations in the USA and Indonesia.
                 </p>
               </div>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">

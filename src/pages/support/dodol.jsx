@@ -109,7 +109,7 @@ export default function Donate() {
                       style={{ width: `calc((${2} * 2 + 1) / 8 * 100%)` }}
                     />
                   </div>
-                  <div className="mt-6 hidden grid-cols-4 text-sm font-medium text-gray-600 sm:grid">
+                  <div className="mt-6 grid-cols-4 text-sm font-medium text-gray-600 grid">
                     <div className="text-yellow-800 text-lg">72% of $5,000</div>
                     <div
                       className={classNames(
@@ -177,6 +177,26 @@ export default function Donate() {
               </h2>
 
               <form>
+                <div className="flex mb-4">
+                  {/* Size selector */}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6 text-gray-700 mr-3"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                    />
+                  </svg>
+                  <span className="text-gray-700">
+                    Donation drive ends on 30 Dec 2023, 00:00 AM
+                  </span>
+                </div>
                 <div className="sm:flex sm:justify-between">
                   {/* Size selector */}
                   <div className="relative mt-2 rounded-md shadow-sm w-full">
