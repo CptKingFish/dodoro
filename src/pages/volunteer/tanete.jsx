@@ -1,17 +1,3 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
 import { useState } from "react";
 import {
   CheckIcon,
@@ -23,6 +9,9 @@ import { ShieldCheckIcon } from "@heroicons/react/24/outline";
 import VolunteerInfo from "@/components/volunteer_info";
 import Footer from "@/components/footer";
 import BlogCardsSm from "@/components/blog_cards_sm";
+
+import { LangContext } from "@/pages/_app";
+import { useContext } from "react";
 
 const reviews = { average: 4, totalCount: 1624 };
 
@@ -54,6 +43,7 @@ const product = {
 
 export default function VolunteerTanete() {
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
+  const { lang } = useContext(LangContext);
 
   return (
     <>
@@ -90,7 +80,11 @@ export default function VolunteerTanete() {
 
             <div className="mt-4">
               <h1 className="text-3xl font-bold tracking-tight text-yellow-900 sm:text-4xl">
-                {product.name}
+                {lang.name !== "Bahasa" ? (
+                  <>Helping out at Tanete village</>
+                ) : (
+                  <>Membantu di desa Tanete</>
+                )}
               </h1>
             </div>
 
@@ -109,15 +103,34 @@ export default function VolunteerTanete() {
 
               <div className="mt-10 border-t border-gray-200 pt-10 space-y-6">
                 <h3 className="text-lg font-medium text-gray-900">
-                  About this event
+                  {lang.name !== "Bahasa" ? (
+                    <>About this event</>
+                  ) : (
+                    <>Tentang acara ini</>
+                  )}
                 </h3>
                 <p className="mt-4 text-md text-gray-500">
-                  Join us in the beautiful Tanete Village for a heartwarming
-                  volunteering event. Together, we&apos;ll partner with local
-                  dodol makers, sharing our skills and resources to help them
-                  enhance their craft and improve their livelihoods. Your
-                  contribution will make a meaningful, lasting impact on this
-                  close-knit community.
+                  {lang.name !== "Bahasa" ? (
+                    <>
+                      Join us in the beautiful Tanete Village for a heartwarming
+                      volunteering event. Together, we&apos;ll partner with
+                      local dodol makers, sharing our skills and resources to
+                      help them enhance their craft and improve their
+                      livelihoods. Your contribution will make a meaningful,
+                      lasting impact on this close-knit community.
+                    </>
+                  ) : (
+                    <>
+                      Bergabunglah bersama kami di Desa Tanete yang indah untuk
+                      pengalaman yang menghangatkan hati acara sukarela.
+                      Bersama-sama, kami akan bermitra dengan lokal pembuat
+                      dodol, berbagi keterampilan dan sumber daya kami untuk
+                      membantu mereka meningkatkan keterampilan mereka dan
+                      meningkatkan penghidupan mereka. Milikmu kontribusinya
+                      akan memberikan dampak yang berarti dan bertahan lama
+                      dalam hal ini komunitas yang erat.
+                    </>
+                  )}
                 </p>
               </div>
             </section>
@@ -162,7 +175,11 @@ export default function VolunteerTanete() {
                     />
                   </svg>
                   <span className="text-gray-700">
-                    Sign up before 30 Jan 2023, 00:00 AM
+                    {lang.name !== "Bahasa" ? (
+                      <>Sign up before 30 Jan 2023, 00:00 AM</>
+                    ) : (
+                      <>Daftar sebelum 30 Jan 2023, 00:00</>
+                    )}
                   </span>
                 </div>
                 {/* <div className="mt-4">
@@ -182,7 +199,11 @@ export default function VolunteerTanete() {
                     type="submit"
                     className="flex w-full items-center justify-center rounded-md border border-transparent bg-yellow-800 px-8 py-3 text-base font-medium text-white hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-50"
                   >
-                    Volunteer Now
+                    {lang.name !== "Bahasa" ? (
+                      <>Volunteer Now</>
+                    ) : (
+                      <>Relawan Sekarang</>
+                    )}
                   </button>
                 </div>
                 <div className="block lg:hidden mt-8">

@@ -1,12 +1,15 @@
 import Link from "next/link";
 
+import { LangContext } from "@/pages/_app";
+import { useContext } from "react";
+
 const navigation = {
   main: [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Support", href: "/support" },
-    { name: "Volunteer", href: "/volunteer" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", nameb: "Rumah", href: "/" },
+    { name: "About", nameb: "Tentang", href: "/about" },
+    { name: "Support", nameb: "Mendukung", href: "/support" },
+    { name: "Volunteer", nameb: "Sukarelawan", href: "/volunteer" },
+    { name: "Contact", nameb: "Kontak", href: "/contact" },
   ],
   social: [
     {
@@ -61,6 +64,7 @@ const navigation = {
 };
 
 export default function Footer() {
+  const { lang } = useContext(LangContext);
   return (
     <footer className="bg-white">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
@@ -74,7 +78,7 @@ export default function Footer() {
                 href={item.href}
                 className="text-sm leading-6 text-gray-600 hover:text-gray-900"
               >
-                {item.name}
+                {lang.name !== "Bahasa" ? <>{item.name}</> : <>{item.nameb}</>}
               </Link>
             </div>
           ))}

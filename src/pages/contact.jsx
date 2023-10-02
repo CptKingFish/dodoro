@@ -1,6 +1,10 @@
 import Footer from "@/components/footer";
 
+import { LangContext } from "@/pages/_app";
+import { useContext } from "react";
+
 export default function Contact() {
+  const { lang } = useContext(LangContext);
   return (
     <>
       <div className="bg-white py-24 sm:py-32">
@@ -9,11 +13,25 @@ export default function Contact() {
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-yellow-900">
-                  Get in touch
+                  {lang.name !== "Bahasa" ? (
+                    <>Get in touch</>
+                  ) : (
+                    <>Berhubungan</>
+                  )}
                 </h2>
                 <p className="mt-4 leading-7 text-gray-600">
-                  Feel free to contact us if you have any more further questions
-                  or would like to make a material donation.
+                  {lang.name !== "Bahasa" ? (
+                    <>
+                      Feel free to contact us if you have any more further
+                      questions or would like to make a material donation.
+                    </>
+                  ) : (
+                    <>
+                      Jangan ragu untuk menghubungi kami jika Anda memiliki
+                      pertanyaan lebih lanjut atau ingin memberikan sumbangan
+                      materi.
+                    </>
+                  )}
                 </p>
               </div>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
@@ -57,7 +75,11 @@ export default function Contact() {
                 </div>
                 <div className="rounded-2xl bg-gray-50 p-10">
                   <h3 className="text-base font-semibold leading-7 text-gray-900">
-                    Join our team
+                    {lang.name !== "Bahasa" ? (
+                      <>Join our team</>
+                    ) : (
+                      <>Bergabunglah dengan tim kami</>
+                    )}
                   </h3>
                   <dl className="mt-3 space-y-1 text-sm leading-6 text-gray-600">
                     <div>
@@ -79,7 +101,11 @@ export default function Contact() {
                 </div>
                 <div className="rounded-2xl bg-gray-50 p-10">
                   <h3 className="text-base font-semibold leading-7 text-gray-900">
-                    Say hello
+                    {lang.name !== "Bahasa" ? (
+                      <>Say hello</>
+                    ) : (
+                      <>Katakan halo</>
+                    )}
                   </h3>
                   <dl className="mt-3 space-y-1 text-sm leading-6 text-gray-600">
                     <div>
@@ -104,10 +130,17 @@ export default function Contact() {
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 pt-16 lg:grid-cols-3">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-yellow-900">
-                  Locations
+                  {lang.name !== "Bahasa" ? <>Locations</> : <>Lokasi</>}
                 </h2>
                 <p className="mt-4 leading-7 text-gray-600">
-                  You can visit us at locations in the USA and Indonesia.
+                  {lang.name !== "Bahasa" ? (
+                    <>You can visit us at locations in the USA and Indonesia.</>
+                  ) : (
+                    <>
+                      Anda dapat mengunjungi kami di lokasi di Amerika dan
+                      Indonesia.
+                    </>
+                  )}
                 </p>
               </div>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">

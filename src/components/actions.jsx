@@ -9,6 +9,7 @@ import {
 
 import { LangContext } from "@/pages/_app";
 import { useContext } from "react";
+import Link from "next/link";
 
 const secondaryFeatures = [
   {
@@ -89,7 +90,7 @@ export default function Actions() {
                     )}
                   </p>
                   <p className="mt-6">
-                    <a
+                    <Link
                       href={feature.href}
                       className="text-sm font-semibold leading-6 text-yellow-600"
                     >
@@ -99,7 +100,7 @@ export default function Actions() {
                         <>{"Belajarlah lagi"}</>
                       )}
                       <span aria-hidden="true">→</span>
-                    </a>
+                    </Link>
                   </p>
                 </dd>
               </div>

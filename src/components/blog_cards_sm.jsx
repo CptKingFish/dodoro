@@ -1,5 +1,8 @@
 import { useRouter } from "next/router";
 
+import { LangContext } from "@/pages/_app";
+import { useContext } from "react";
+
 const posts = [
   {
     id: 1,
@@ -20,13 +23,18 @@ const posts = [
 ];
 
 export default function BlogCardsSm() {
+  const { lang } = useContext(LangContext);
   const router = useRouter();
   return (
     <div className="bg-white py-4 sm:py-4">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="mt-2 text-lg leading-8 text-gray-600 font-semibold">
-            Learn more about this cause.
+            {lang.name !== "Bahasa" ? (
+              <>Learn more about this cause.</>
+            ) : (
+              <>Pelajari lebih lanjut tentang penyebab ini.</>
+            )}
           </p>
         </div>
         <div className="mx-auto mt-4 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-4 lg:mx-0 lg:max-w-none">
@@ -68,7 +76,11 @@ export default function BlogCardsSm() {
               <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
                 <a href={post.href}>
                   <span className="absolute inset-0" />
-                  {post.title}
+                  {lang.name !== "Bahasa" ? (
+                    <>The Dodol makers of Tanete Village</>
+                  ) : (
+                    <>Para pembuat Dodol di Desa Tanete</>
+                  )}
                 </a>
               </h3>
             </article>

@@ -1,18 +1,3 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
 import { Fragment, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
 import {
@@ -25,190 +10,8 @@ import {
 import Footer from "@/components/footer";
 import Link from "next/link";
 
-const navigation = {
-  categories: [
-    {
-      id: "women",
-      name: "Women",
-      featured: [
-        {
-          name: "New Arrivals",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg",
-          imageAlt:
-            "Models sitting back to back, wearing Basic Tee in black and bone.",
-        },
-        {
-          name: "Basic Tees",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg",
-          imageAlt:
-            "Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.",
-        },
-      ],
-      sections: [
-        {
-          id: "clothing",
-          name: "Clothing",
-          items: [
-            { name: "Tops", href: "#" },
-            { name: "Dresses", href: "#" },
-            { name: "Pants", href: "#" },
-            { name: "Denim", href: "#" },
-            { name: "Sweaters", href: "#" },
-            { name: "T-Shirts", href: "#" },
-            { name: "Jackets", href: "#" },
-            { name: "Activewear", href: "#" },
-            { name: "Browse All", href: "#" },
-          ],
-        },
-        {
-          id: "accessories",
-          name: "Accessories",
-          items: [
-            { name: "Watches", href: "#" },
-            { name: "Wallets", href: "#" },
-            { name: "Bags", href: "#" },
-            { name: "Sunglasses", href: "#" },
-            { name: "Hats", href: "#" },
-            { name: "Belts", href: "#" },
-          ],
-        },
-        {
-          id: "brands",
-          name: "Brands",
-          items: [
-            { name: "Full Nelson", href: "#" },
-            { name: "My Way", href: "#" },
-            { name: "Re-Arranged", href: "#" },
-            { name: "Counterfeit", href: "#" },
-            { name: "Significant Other", href: "#" },
-          ],
-        },
-      ],
-    },
-    {
-      id: "men",
-      name: "Men",
-      featured: [
-        {
-          name: "New Arrivals",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg",
-          imageAlt:
-            "Drawstring top with elastic loop closure and textured interior padding.",
-        },
-        {
-          name: "Artwork Tees",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg",
-          imageAlt:
-            "Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.",
-        },
-      ],
-      sections: [
-        {
-          id: "clothing",
-          name: "Clothing",
-          items: [
-            { name: "Tops", href: "#" },
-            { name: "Pants", href: "#" },
-            { name: "Sweaters", href: "#" },
-            { name: "T-Shirts", href: "#" },
-            { name: "Jackets", href: "#" },
-            { name: "Activewear", href: "#" },
-            { name: "Browse All", href: "#" },
-          ],
-        },
-        {
-          id: "accessories",
-          name: "Accessories",
-          items: [
-            { name: "Watches", href: "#" },
-            { name: "Wallets", href: "#" },
-            { name: "Bags", href: "#" },
-            { name: "Sunglasses", href: "#" },
-            { name: "Hats", href: "#" },
-            { name: "Belts", href: "#" },
-          ],
-        },
-        {
-          id: "brands",
-          name: "Brands",
-          items: [
-            { name: "Re-Arranged", href: "#" },
-            { name: "Counterfeit", href: "#" },
-            { name: "Full Nelson", href: "#" },
-            { name: "My Way", href: "#" },
-          ],
-        },
-      ],
-    },
-  ],
-  pages: [
-    { name: "Company", href: "#" },
-    { name: "Stores", href: "#" },
-  ],
-};
-const orders = [
-  {
-    number: "WU88191111",
-    date: "January 22, 2021",
-    datetime: "2021-01-22",
-    href: "#",
-    invoiceHref: "#",
-    total: "$302.00",
-    products: [
-      {
-        id: 1,
-        name: "Nomad Tumbler",
-        description:
-          "This durable double-walled insulated tumbler keeps your beverages at the perfect temperature all day long. Hot, cold, or even lukewarm if you're weird like that, this bottle is ready for your next adventure.",
-        href: "#",
-        price: "$35.00",
-        status: "out-for-delivery",
-        date: "January 5, 2021",
-        datetime: "2021-01-05",
-        imageSrc:
-          "https://tailwindui.com/img/ecommerce-images/order-history-page-06-product-01.jpg",
-        imageAlt:
-          "Olive drab green insulated bottle with flared screw lid and flat top.",
-      },
-      // More products...
-    ],
-  },
-  // More orders...
-];
-const footerNavigation = {
-  products: [
-    { name: "Bags", href: "#" },
-    { name: "Tees", href: "#" },
-    { name: "Objects", href: "#" },
-    { name: "Home Goods", href: "#" },
-    { name: "Accessories", href: "#" },
-  ],
-  company: [
-    { name: "Who we are", href: "#" },
-    { name: "Sustainability", href: "#" },
-    { name: "Press", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Terms & Conditions", href: "#" },
-    { name: "Privacy", href: "#" },
-  ],
-  customerService: [
-    { name: "Contact", href: "#" },
-    { name: "Shipping", href: "#" },
-    { name: "Returns", href: "#" },
-    { name: "Warranty", href: "#" },
-    { name: "Secure Payments", href: "#" },
-    { name: "FAQ", href: "#" },
-    { name: "Find a store", href: "#" },
-  ],
-};
+import { LangContext } from "@/pages/_app";
+import { useContext } from "react";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -216,6 +19,7 @@ function classNames(...classes) {
 
 export default function Volunteer() {
   const [open, setOpen] = useState(false);
+  const { lang } = useContext(LangContext);
 
   return (
     <>
@@ -224,10 +28,23 @@ export default function Volunteer() {
           <div className="mx-auto max-w-4xl">
             <div className="px-4 sm:px-0">
               <h1 className="text-2xl font-bold tracking-tight text-yellow-900 sm:text-3xl">
-                Be a Volunteer
+                {lang.name !== "Bahasa" ? (
+                  <>Be a Volunteer</>
+                ) : (
+                  <>Jadilah Relawan</>
+                )}
               </h1>
               <p className="mt-2 text-sm text-gray-500">
-                Join a volunteering activity with us and help the community!
+                {lang.name !== "Bahasa" ? (
+                  <>
+                    Join a volunteering activity with us and help the community!
+                  </>
+                ) : (
+                  <>
+                    Bergabunglah dengan kegiatan sukarela bersama kami dan bantu
+                    komunitas!
+                  </>
+                )}
               </p>
             </div>
 
@@ -246,26 +63,49 @@ export default function Volunteer() {
                             <div className="sm:flex">
                               <div>
                                 <h4 className="font-medium text-yellow-900">
-                                  {"Helping out at Tanete village"}
+                                  {lang.name !== "Bahasa" ? (
+                                    <>Helping out at Tanete village</>
+                                  ) : (
+                                    <>Membantu di desa Tanete</>
+                                  )}
                                 </h4>
                                 <p className="mt-2 hidden text-sm text-gray-500 sm:block">
-                                  Join us in the beautiful Tanete Village for a
-                                  heartwarming volunteering event. Together,
-                                  we&apos;ll partner with local dodol makers,
-                                  sharing our skills and resources to help them
-                                  enhance their craft and improve their
-                                  livelihoods. Your contribution will make a
-                                  meaningful, lasting impact on this close-knit
-                                  community.
+                                  {lang.name !== "Bahasa" ? (
+                                    <>
+                                      Join us in the beautiful Tanete Village
+                                      for a heartwarming volunteering event.
+                                      Together, we&apos;ll partner with local
+                                      dodol makers, sharing our skills and
+                                      resources to help them enhance their craft
+                                      and improve their livelihoods. Your
+                                      contribution will make a meaningful,
+                                      lasting impact on this close-knit
+                                      community.
+                                    </>
+                                  ) : (
+                                    <>
+                                      Bergabunglah dengan kami di Desa Tanete
+                                      yang indah untuk acara sukarelawan yang
+                                      mengharukan. Bersama-sama, kami akan
+                                      bermitra dengan lokal pembuat dodol,
+                                      berbagi keahlian dan sumber daya untuk
+                                      membantu mereka meningkatkan keterampilan
+                                      mereka dan meningkatkan penghidupan
+                                      mereka. Milikmu kontribusinya akan
+                                      memberikan arti, dampak jangka panjang
+                                      pada hubungan erat ini masyarakat.
+                                    </>
+                                  )}
                                 </p>
                               </div>
-                              {/* <p className="mt-1 font-medium text-gray-900 sm:ml-2 sm:mt-0">
-                                  {"16 openings"}
-                                </p> */}
                             </div>
                             <div className="mt-5 flex text-sm font-medium sm:mt-4">
                               <span className="text-yellow-800 ">
-                                Thu, 31 Dec 2023
+                                {lang.name !== "Bahasa" ? (
+                                  <>Thu, 31 Dec 2023</>
+                                ) : (
+                                  <>Kam, 31 Des 2023</>
+                                )}
                               </span>
                               <div className="ml-4 border-l border-gray-200 pl-4 sm:ml-6 sm:pl-6">
                                 <span className="text-yellow-800">
@@ -284,7 +124,12 @@ export default function Volunteer() {
                               href="/volunteer/tanete"
                               className="text-yellow-950 hover:text-yellow-600"
                             >
-                              Learn More →
+                              {lang.name !== "Bahasa" ? (
+                                <>Learn More</>
+                              ) : (
+                                <>Belajarlah lagi</>
+                              )}{" "}
+                              →
                             </Link>
                           </div>
                         </div>
@@ -317,26 +162,48 @@ export default function Volunteer() {
                             <div className="sm:flex">
                               <div>
                                 <h4 className="font-medium text-yellow-900">
-                                  {"Clearing trash at Maros Baru"}
+                                  {lang.name !== "Bahasa" ? (
+                                    <>Clearing trash at Maros Baru</>
+                                  ) : (
+                                    <>Membersihkan sampah di Maros Baru</>
+                                  )}
                                 </h4>
                                 <p className="mt-2 hidden text-sm text-gray-500 sm:block">
-                                  Join our volunteer event in picturesque Maros
-                                  Baru, where we&apos;ll not only clear trash
-                                  but also support local dodol makers.
-                                  Let&apos;s preserve the environment while
-                                  helping these artisans create their sweet
-                                  treats in a cleaner, more sustainable space.
-                                  Your participation makes a meaningful
-                                  difference.
+                                  {lang.name !== "Bahasa" ? (
+                                    <>
+                                      {" "}
+                                      Join our volunteer event in picturesque
+                                      Maros Baru, where we&apos;ll not only
+                                      clear trash but also support local dodol
+                                      makers. Let&apos;s preserve the
+                                      environment while helping these artisans
+                                      create their sweet treats in a cleaner,
+                                      more sustainable space. Your participation
+                                      makes a meaningful difference.
+                                    </>
+                                  ) : (
+                                    <>
+                                      Bergabunglah dalam acara sukarelawan kami
+                                      di Maros yang indah Baru, tempat kami
+                                      tidak hanya membersihkan sampah namun juga
+                                      mendukung pembuat dodol lokal. Mari
+                                      lestarikan lingkungan selagi membantu para
+                                      pengrajin ini membuat manisan mereka
+                                      suguhan di tempat yang lebih bersih dan
+                                      ramah lingkungan. Partisipasi Anda sangat
+                                      berarti perbedaan.
+                                    </>
+                                  )}
                                 </p>
                               </div>
-                              {/* <p className="mt-1 font-medium text-gray-900 sm:ml-2 sm:mt-0">
-                                  {"16 openings"}
-                                </p> */}
                             </div>
                             <div className="mt-5 flex text-sm font-medium sm:mt-4">
                               <span className="text-yellow-800 ">
-                                Fri, 22 Jan 2021
+                                {lang.name !== "Bahasa" ? (
+                                  <>Fri, 22 Jan 2021</>
+                                ) : (
+                                  <>Jum, 22 Jan 2021</>
+                                )}
                               </span>
                               <div className="ml-4 border-l border-gray-200 pl-4 sm:ml-6 sm:pl-6">
                                 <span className="text-yellow-800 ">
@@ -356,11 +223,11 @@ export default function Volunteer() {
                               aria-hidden="true"
                             />
                             <p>
-                              Finished
-                              <span className="hidden sm:inline">
-                                {" "}
-                                on <time>{"January 22, 2021"}</time>
-                              </span>
+                              {lang.name !== "Bahasa" ? (
+                                <>Finished on January 22, 2021</>
+                              ) : (
+                                <>Selesai pada 22 Januari 2021</>
+                              )}
                             </p>
                           </div>
                         </div>

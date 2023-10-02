@@ -5,7 +5,11 @@ import {
 } from "@heroicons/react/20/solid";
 import { ClockIcon, MapPinIcon } from "@heroicons/react/24/outline";
 
+import { LangContext } from "@/pages/_app";
+import { useContext } from "react";
+
 export default function VolunteerInfo() {
+  const { lang } = useContext(LangContext);
   return (
     <div className="lg:col-start-3 lg:row-end-1">
       <h2 className="sr-only">Summary</h2>
@@ -35,7 +39,13 @@ export default function VolunteerInfo() {
               />
             </dt>
             <dd className="leading-6 font-semibold">
-              <time dateTime="2023-01-31">January 31, 2023</time>
+              <time dateTime="2023-01-31">
+                {lang.name !== "Bahasa" ? (
+                  <>January 31, 2023</>
+                ) : (
+                  <>31 Januari 2023</>
+                )}
+              </time>
             </dd>
           </div>
           <div className="mt-4 flex w-full flex-none gap-x-4 px-6">

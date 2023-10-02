@@ -1,17 +1,3 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
 import { useState } from "react";
 import {
   CheckIcon,
@@ -23,6 +9,9 @@ import { ShieldCheckIcon } from "@heroicons/react/24/outline";
 import Footer from "@/components/footer";
 import DonationCards from "@/components/donation_cards";
 import BlogCardsSm from "@/components/blog_cards_sm";
+
+import { LangContext } from "@/pages/_app";
+import { useContext } from "react";
 
 const product = {
   name: "Support Dodol makers",
@@ -47,6 +36,7 @@ function classNames(...classes) {
 
 export default function Donate() {
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
+  const { lang } = useContext(LangContext);
 
   return (
     <>
@@ -83,7 +73,11 @@ export default function Donate() {
 
             <div className="mt-4">
               <h1 className="text-3xl font-bold tracking-tight text-yellow-900 sm:text-4xl">
-                {product.name}
+                {lang.name !== "Bahasa" ? (
+                  <>Support Dodol makers</>
+                ) : (
+                  <>Dukung pembuat Dodol</>
+                )}
               </h1>
             </div>
 
@@ -96,10 +90,14 @@ export default function Donate() {
                 <h4 className="sr-only">Status</h4>
                 <p>
                   <span className="text-2xl font-bold text-yellow-900">
-                    $3621{" "}
+                    {lang.name !== "Bahasa" ? <>$3621</> : <>41,050,770 IDR</>}{" "}
                   </span>
                   <span className="text-lg font-medium text-gray-900">
-                    raised from 47 donors
+                    {lang.name !== "Bahasa" ? (
+                      <>raised from 47 donors</>
+                    ) : (
+                      <>terkumpul dari 47 donatur</>
+                    )}
                   </span>
                 </p>
                 <div className="mt-6" aria-hidden="true">
@@ -110,7 +108,14 @@ export default function Donate() {
                     />
                   </div>
                   <div className="mt-6 grid-cols-4 text-sm font-medium text-gray-600 grid">
-                    <div className="text-yellow-800 text-lg">72% of $5,000</div>
+                    <div className="text-yellow-800 text-lg">
+                      {" "}
+                      {lang.name !== "Bahasa" ? (
+                        <>72% of $5,000</>
+                      ) : (
+                        <>72% dari $5.000</>
+                      )}
+                    </div>
                     <div
                       className={classNames(
                         2 > 0 ? "text-indigo-600" : "",
@@ -130,26 +135,44 @@ export default function Donate() {
                         "text-lg"
                       )}
                     >
-                      21 more days
+                      {lang.name !== "Bahasa" ? (
+                        <>21 more days</>
+                      ) : (
+                        <>21 hari lagi</>
+                      )}
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* <div className="mt-4 space-y-6">
-              <p className="text-base text-gray-500">{product.description}</p>
-            </div> */}
-
               <div className="mt-10 border-t border-gray-200 pt-10 space-y-6">
                 <h3 className="text-lg font-medium text-gray-900">
-                  About this donation
+                  {lang.name !== "Bahasa" ? (
+                    <>About this donation</>
+                  ) : (
+                    <>Tentang sumbangan ini</>
+                  )}
                 </h3>
                 <p className="mt-4 text-md text-gray-500">
-                  Stand with us in supporting dodol makers. Your contribution
-                  goes a long way in enhancing their working conditions,
-                  empowering skilled artisans, and preserving cherished
-                  traditions. Join us today and be a part of this heartwarming
-                  journey to make a sweet and lasting change.
+                  {lang.name !== "Bahasa" ? (
+                    <>
+                      {" "}
+                      Stand with us in supporting dodol makers. Your
+                      contribution goes a long way in enhancing their working
+                      conditions, empowering skilled artisans, and preserving
+                      cherished traditions. Join us today and be a part of this
+                      heartwarming journey to make a sweet and lasting change.
+                    </>
+                  ) : (
+                    <>
+                      Mari bersama kami mendukung para pembuat dodol. Kontribusi
+                      Anda melakukan banyak hal dalam meningkatkan kondisi kerja
+                      mereka, memberdayakan perajin terampil, dan melestarikan
+                      kearifan lokal tradisi. Bergabunglah dengan kami hari ini
+                      dan jadilah bagian dari hal yang mengharukan ini
+                      perjalanan untuk membuat perubahan yang manis dan abadi.
+                    </>
+                  )}
                 </p>
               </div>
             </section>
@@ -194,7 +217,14 @@ export default function Donate() {
                     />
                   </svg>
                   <span className="text-gray-700">
-                    Donation drive ends on 30 Dec 2023, 00:00 AM
+                    {lang.name !== "Bahasa" ? (
+                      <>Donation drive ends on 30 Dec 2023, 00:00 AM</>
+                    ) : (
+                      <>
+                        Penggalangan donasi berakhir pada 30 Des 2023, pukul
+                        00.00
+                      </>
+                    )}
                   </span>
                 </div>
                 <div className="sm:flex sm:justify-between">
@@ -243,7 +273,7 @@ export default function Donate() {
                     type="submit"
                     className="flex w-full items-center justify-center rounded-md border border-transparent bg-yellow-900 px-8 py-3 text-base font-medium text-white hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
                   >
-                    Support
+                    {lang.name !== "Bahasa" ? <>Support</> : <>Mendukung</>}
                   </button>
                 </div>
                 <div className="mt-10">

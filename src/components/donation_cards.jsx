@@ -1,8 +1,12 @@
 import { EllipsisVerticalIcon } from "@heroicons/react/20/solid";
 
+import { LangContext } from "@/pages/_app";
+import { useContext } from "react";
+
 const projects = [
   {
     name: "25,000IDR can feed a Dodol maker for a day.",
+    nameB: "25,000IDR bisa memberi makan pembuat Dodol sehari.",
     initials: "25,000",
     currency: "IDR",
     href: "#",
@@ -11,6 +15,7 @@ const projects = [
   },
   {
     name: "50,000IDR can feed a Dodol maker's family for a day.",
+    nameB: "50,000IDR bisa memberi makan keluarga pembuat Dodol sehari.",
     initials: "50,000",
     currency: "IDR",
     href: "#",
@@ -19,6 +24,8 @@ const projects = [
   },
   {
     name: "100,000IDR can buy medical supplies for the Dodol makers.",
+    nameB:
+      "100,000IDR dapat membeli perbekalan kesehatan bagi para pembuat Dodol.",
     initials: "100,000",
     currency: "IDR",
     href: "#",
@@ -27,6 +34,8 @@ const projects = [
   },
   {
     name: "200,000IDR can purchase a health insurance plan for a Dodol maker.",
+    nameB:
+      "200,000IDR dapat membeli paket asuransi kesehatan untuk pembuat Dodol.",
     initials: "200,000",
     currency: "IDR",
     href: "#",
@@ -40,10 +49,15 @@ function classNames(...classes) {
 }
 
 export default function DonationCards() {
+  const { lang } = useContext(LangContext);
   return (
     <div>
       <h2 className="text-sm font-medium text-gray-500 mb-5">
-        How your support makes a difference.
+        {lang.name !== "Bahasa" ? (
+          <>How your support makes a difference.</>
+        ) : (
+          <>Bagaimana dukungan Anda membuat perbedaan.</>
+        )}
       </h2>
       <ul role="list" className="mt-3 grid grid-cols-1 gap-5 sm:gap-6">
         {projects.map((project) => (
@@ -65,16 +79,19 @@ export default function DonationCards() {
             <div className="flex flex-1 items-center justify-between rounded-r-md border-b border-r border-t border-gray-200 bg-white">
               <div className="flex-1 px-4 py-2 text-sm">
                 <span className="font-semibold text-gray-900 hover:text-gray-600">
-                  {project.name}
+                  {lang.name !== "Bahasa" ? (
+                    <>{project.name}</>
+                  ) : (
+                    <>{project.nameB}</>
+                  )}
                 </span>
-                {/* <p className="text-gray-500">{project.members} Members</p> */}
               </div>
               <div className="flex-shrink-0 pr-2">
                 <button
                   type="button"
                   className="rounded bg-yellow-50 px-2 py-1 text-sm font-semibold text-yellow-600 shadow-sm hover:bg-yellow-100"
                 >
-                  Support
+                  {lang.name !== "Bahasa" ? <>Support</> : <>Mendukung</>}
                 </button>
               </div>
             </div>

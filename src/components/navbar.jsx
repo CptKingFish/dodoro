@@ -7,19 +7,23 @@ import { useState } from "react";
 import Link from "next/link";
 import LanguageToggle from "./language_toggle";
 
+import { LangContext } from "@/pages/_app";
+import { useContext } from "react";
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Support", href: "/support" },
-  { name: "Volunteer", href: "/volunteer" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", nameb: "Rumah", href: "/" },
+  { name: "About", nameb: "Tentang", href: "/about" },
+  { name: "Support", nameb: "Mendukung", href: "/support" },
+  { name: "Volunteer", nameb: "Sukarelawan", href: "/volunteer" },
+  { name: "Contact", nameb: "Kontak", href: "/contact" },
 ];
 
 export default function Navbar() {
+  const { lang } = useContext(LangContext);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <header className="absolute inset-x-0 top-0 z-50">
@@ -53,7 +57,11 @@ export default function Navbar() {
                   href={item.href}
                   className="text-sm font-semibold leading-6 text-gray-900"
                 >
-                  {item.name}
+                  {lang.name !== "Bahasa" ? (
+                    <>{item.name}</>
+                  ) : (
+                    <>{item.nameb}</>
+                  )}
                 </Link>
               ))}
             </div>
@@ -93,13 +101,17 @@ export default function Navbar() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
                     href={item.href}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    {item.name}
-                  </a>
+                    {lang.name !== "Bahasa" ? (
+                      <>{item.name}</>
+                    ) : (
+                      <>{item.nameb}</>
+                    )}
+                  </Link>
                 ))}
               </div>
               <div className="py-6">

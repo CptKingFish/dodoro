@@ -10,197 +10,15 @@ import {
 import Footer from "@/components/footer";
 import Link from "next/link";
 
-const navigation = {
-  categories: [
-    {
-      id: "women",
-      name: "Women",
-      featured: [
-        {
-          name: "New Arrivals",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg",
-          imageAlt:
-            "Models sitting back to back, wearing Basic Tee in black and bone.",
-        },
-        {
-          name: "Basic Tees",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg",
-          imageAlt:
-            "Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.",
-        },
-      ],
-      sections: [
-        {
-          id: "clothing",
-          name: "Clothing",
-          items: [
-            { name: "Tops", href: "#" },
-            { name: "Dresses", href: "#" },
-            { name: "Pants", href: "#" },
-            { name: "Denim", href: "#" },
-            { name: "Sweaters", href: "#" },
-            { name: "T-Shirts", href: "#" },
-            { name: "Jackets", href: "#" },
-            { name: "Activewear", href: "#" },
-            { name: "Browse All", href: "#" },
-          ],
-        },
-        {
-          id: "accessories",
-          name: "Accessories",
-          items: [
-            { name: "Watches", href: "#" },
-            { name: "Wallets", href: "#" },
-            { name: "Bags", href: "#" },
-            { name: "Sunglasses", href: "#" },
-            { name: "Hats", href: "#" },
-            { name: "Belts", href: "#" },
-          ],
-        },
-        {
-          id: "brands",
-          name: "Brands",
-          items: [
-            { name: "Full Nelson", href: "#" },
-            { name: "My Way", href: "#" },
-            { name: "Re-Arranged", href: "#" },
-            { name: "Counterfeit", href: "#" },
-            { name: "Significant Other", href: "#" },
-          ],
-        },
-      ],
-    },
-    {
-      id: "men",
-      name: "Men",
-      featured: [
-        {
-          name: "New Arrivals",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg",
-          imageAlt:
-            "Drawstring top with elastic loop closure and textured interior padding.",
-        },
-        {
-          name: "Artwork Tees",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg",
-          imageAlt:
-            "Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.",
-        },
-      ],
-      sections: [
-        {
-          id: "clothing",
-          name: "Clothing",
-          items: [
-            { name: "Tops", href: "#" },
-            { name: "Pants", href: "#" },
-            { name: "Sweaters", href: "#" },
-            { name: "T-Shirts", href: "#" },
-            { name: "Jackets", href: "#" },
-            { name: "Activewear", href: "#" },
-            { name: "Browse All", href: "#" },
-          ],
-        },
-        {
-          id: "accessories",
-          name: "Accessories",
-          items: [
-            { name: "Watches", href: "#" },
-            { name: "Wallets", href: "#" },
-            { name: "Bags", href: "#" },
-            { name: "Sunglasses", href: "#" },
-            { name: "Hats", href: "#" },
-            { name: "Belts", href: "#" },
-          ],
-        },
-        {
-          id: "brands",
-          name: "Brands",
-          items: [
-            { name: "Re-Arranged", href: "#" },
-            { name: "Counterfeit", href: "#" },
-            { name: "Full Nelson", href: "#" },
-            { name: "My Way", href: "#" },
-          ],
-        },
-      ],
-    },
-  ],
-  pages: [
-    { name: "Company", href: "#" },
-    { name: "Stores", href: "#" },
-  ],
-};
-const orders = [
-  {
-    number: "WU88191111",
-    date: "January 22, 2021",
-    datetime: "2021-01-22",
-    href: "#",
-    invoiceHref: "#",
-    total: "$302.00",
-    products: [
-      {
-        id: 1,
-        name: "Nomad Tumbler",
-        description:
-          "This durable double-walled insulated tumbler keeps your beverages at the perfect temperature all day long. Hot, cold, or even lukewarm if you're weird like that, this bottle is ready for your next adventure.",
-        href: "#",
-        price: "$35.00",
-        status: "out-for-delivery",
-        date: "January 5, 2021",
-        datetime: "2021-01-05",
-        imageSrc:
-          "https://tailwindui.com/img/ecommerce-images/order-history-page-06-product-01.jpg",
-        imageAlt:
-          "Olive drab green insulated bottle with flared screw lid and flat top.",
-      },
-      // More products...
-    ],
-  },
-  // More orders...
-];
-const footerNavigation = {
-  products: [
-    { name: "Bags", href: "#" },
-    { name: "Tees", href: "#" },
-    { name: "Objects", href: "#" },
-    { name: "Home Goods", href: "#" },
-    { name: "Accessories", href: "#" },
-  ],
-  company: [
-    { name: "Who we are", href: "#" },
-    { name: "Sustainability", href: "#" },
-    { name: "Press", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Terms & Conditions", href: "#" },
-    { name: "Privacy", href: "#" },
-  ],
-  customerService: [
-    { name: "Contact", href: "#" },
-    { name: "Shipping", href: "#" },
-    { name: "Returns", href: "#" },
-    { name: "Warranty", href: "#" },
-    { name: "Secure Payments", href: "#" },
-    { name: "FAQ", href: "#" },
-    { name: "Find a store", href: "#" },
-  ],
-};
+import { LangContext } from "@/pages/_app";
+import { useContext } from "react";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Support() {
-  const [open, setOpen] = useState(false);
+  const { lang } = useContext(LangContext);
 
   return (
     <>
@@ -209,16 +27,32 @@ export default function Support() {
           <div className="mx-auto max-w-4xl">
             <div className="px-4 sm:px-0">
               <h1 className="text-2xl font-bold tracking-tight text-yellow-900 sm:text-3xl">
-                Be a Supporter
+                {lang.name !== "Bahasa" ? (
+                  <>Be a Supporter</>
+                ) : (
+                  <>Jadilah Pendukung</>
+                )}
               </h1>
               <p className="mt-2 text-sm text-gray-500">
-                Support us by donating to a cause you are passionate about.
+                {lang.name !== "Bahasa" ? (
+                  <>
+                    Support us by donating to a cause you are passionate about.
+                  </>
+                ) : (
+                  <>
+                    Dukung kami dengan berdonasi untuk tujuan yang Anda sukai.
+                  </>
+                )}
               </p>
             </div>
 
             <section aria-labelledby="recent-heading" className="mt-16 ">
               <h2 id="recent-heading" className="sr-only">
-                Recent orders
+                {lang.name !== "Bahasa" ? (
+                  <>Recent orders</>
+                ) : (
+                  <>Pesanan terbaru</>
+                )}
               </h2>
 
               <div className="space-y-16 sm:space-y-24">
@@ -231,36 +65,57 @@ export default function Support() {
                             <div className="sm:flex">
                               <div>
                                 <h4 className="font-medium text-yellow-900">
-                                  {"Support Dodol makers"}
+                                  {lang.name !== "Bahasa" ? (
+                                    <>Support Dodol makers</>
+                                  ) : (
+                                    <>Dukung pembuat Dodol</>
+                                  )}
                                 </h4>
                                 <p className="mt-2 hidden text-sm text-gray-500 sm:block">
-                                  Stand with us in supporting dodol makers. Your
-                                  contribution goes a long way in enhancing
-                                  their working conditions, empowering skilled
-                                  artisans, and preserving cherished traditions.
-                                  Join us today and be a part of this
-                                  heartwarming journey to make a sweet and
-                                  lasting change.
+                                  {lang.name !== "Bahasa" ? (
+                                    <>
+                                      Stand with us in supporting dodol makers.
+                                      Your contribution goes a long way in
+                                      enhancing their working conditions,
+                                      empowering skilled artisans, and
+                                      preserving cherished traditions. Join us
+                                      today and be a part of this heartwarming
+                                      journey to make a sweet and lasting
+                                      change.
+                                    </>
+                                  ) : (
+                                    <>
+                                      Mari bersama kami mendukung para pembuat
+                                      dodol. Milikmu kontribusi sangat membantu
+                                      dalam meningkatkan kondisi kerja mereka,
+                                      memberdayakan terampil pengrajin, dan
+                                      melestarikan tradisi yang disayangi.
+                                      Bergabunglah dengan kami hari ini dan
+                                      jadilah bagian dari ini perjalanan yang
+                                      mengharukan untuk membuat yang manis dan
+                                      perubahan yang langgeng.
+                                    </>
+                                  )}
                                 </p>
                               </div>
-                              {/* <p className="mt-1 font-medium text-gray-900 sm:ml-2 sm:mt-0">
-                                  {"16 openings"}
-                                </p> */}
                             </div>
                             <div className="mt-5 flex text-sm font-medium sm:mt-4">
                               <span className="text-yellow-800 ">
-                                $3621 raised from 47 donors
+                                {lang.name !== "Bahasa" ? (
+                                  <>$3621 raised from 47 donors</>
+                                ) : (
+                                  <>41,032,026 IDR dikumpulkan dari 47 donor</>
+                                )}
                               </span>
                               <div className="ml-4 border-l border-gray-200 pl-4 sm:ml-6 sm:pl-6">
                                 <span className="text-yellow-800">
-                                  21 more days
+                                  {lang.name !== "Bahasa" ? (
+                                    <>21 more days</>
+                                  ) : (
+                                    <>21 hari lagi</>
+                                  )}
                                 </span>
                               </div>
-                              {/* <div className="ml-4 border-l border-gray-200 pl-4 sm:ml-6 sm:pl-6">
-                                <span className="text-yellow-800">
-                                  Tanete, Maros
-                                </span>
-                              </div> */}
                             </div>
                           </div>
                           <div className="mt-6 font-medium">
@@ -268,7 +123,12 @@ export default function Support() {
                               href="/support/dodol"
                               className="text-yellow-950 hover:text-yellow-600"
                             >
-                              Learn More →
+                              {lang.name !== "Bahasa" ? (
+                                <>Learn More</>
+                              ) : (
+                                <>Belajarlah lagi</>
+                              )}{" "}
+                              →
                             </Link>
                           </div>
                         </div>
@@ -304,30 +164,43 @@ export default function Support() {
                                   {"Support rice farmers"}
                                 </h4>
                                 <p className="mt-2 hidden text-sm text-gray-500 sm:block">
-                                  Stand with us in supporting rice farmers. Your
-                                  contribution goes a long way in enhancing
-                                  their working conditions, and preserving
-                                  cherished traditions. Join us today and be a
-                                  part of this heartwarming journey to make a
-                                  sweet and lasting change.
+                                  {lang.name !== "Bahasa" ? (
+                                    <>
+                                      {" "}
+                                      Stand with us in supporting rice farmers.
+                                      Your contribution goes a long way in
+                                      enhancing their working conditions, and
+                                      preserving cherished traditions. Join us
+                                      today and be a part of this heartwarming
+                                      journey to make a sweet and lasting
+                                      change.
+                                    </>
+                                  ) : (
+                                    <>
+                                      Mari bersama kami dalam mendukung petani
+                                      padi. Milikmu kontribusi sangat membantu
+                                      dalam meningkatkan kondisi kerja mereka,
+                                      dan pelestarian tradisi yang dijunjung
+                                      tinggi. Bergabunglah dengan kami hari ini
+                                      dan jadilah a bagian dari perjalanan yang
+                                      mengharukan ini untuk membuat a perubahan
+                                      yang manis dan abadi.
+                                    </>
+                                  )}
                                 </p>
                               </div>
-                              {/* <p className="mt-1 font-medium text-gray-900 sm:ml-2 sm:mt-0">
-                                  {"16 openings"}
-                                </p> */}
                             </div>
                             <div className="mt-5 flex text-sm font-medium sm:mt-4">
                               <span className="text-yellow-800 ">
-                                $1231 raised from 12 donors
+                                {lang.name !== "Bahasa" ? (
+                                  <>$1231 raised from 12 donors</>
+                                ) : (
+                                  <>13,949,097 IDR dikumpulkan dari 12 donor</>
+                                )}
                               </span>
                               <div className="ml-4 border-l border-gray-200 pl-4 sm:ml-6 sm:pl-6">
                                 <span className="text-yellow-800 ">-</span>
                               </div>
-                              {/* <div className="ml-4 border-l border-gray-200 pl-4 sm:ml-6 sm:pl-6">
-                                <span href="#" className="text-yellow-800">
-                                  Malino, Maros
-                                </span>
-                              </div> */}
                             </div>
                           </div>
                           <div className="flex space-x-2 mt-5 lg:mt-0">
@@ -336,14 +209,27 @@ export default function Support() {
                               aria-hidden="true"
                             />
                             <p>
-                              Finished on
+                              {lang.name !== "Bahasa" ? (
+                                <>Finished</>
+                              ) : (
+                                <>Selesai pada</>
+                              )}
+
                               <span className="hidden sm:inline">
                                 {" "}
-                                on <time>{"January 22, 2021"}</time> with{" "}
+                                {lang.name !== "Bahasa" ? (
+                                  <>on January 22, 2021 with</>
+                                ) : (
+                                  <>22 Januari 2021 dengan pengumpulan</>
+                                )}{" "}
                                 <span className="text-yellow-900 font-bold">
-                                  $1231
+                                  {lang.name !== "Bahasa" ? (
+                                    <>$1231</>
+                                  ) : (
+                                    <>13,949,097 IDR.</>
+                                  )}
                                 </span>{" "}
-                                raised.
+                                {lang.name !== "Bahasa" ? <> raised.</> : <></>}
                               </span>
                             </p>
                           </div>
