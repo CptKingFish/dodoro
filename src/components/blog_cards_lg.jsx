@@ -1,9 +1,13 @@
 import { useRouter } from "next/router";
 
+import { LangContext } from "@/pages/_app";
+import { useContext } from "react";
+
 const posts = [
   {
     id: 1,
     title: "The Dodol makers of Tanete village",
+    titleB: "Para pembuat Dodol di desa Tanete",
     href: "/blog/dodol",
     description:
       "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
@@ -21,12 +25,17 @@ const posts = [
 
 export default function BlogCardsLg() {
   const router = useRouter();
+  const { lang } = useContext(LangContext);
   return (
     <div className="bg-white py-12 sm:py-12">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-yellow-900 sm:text-4xl">
-            Learn more about our causes.
+            {lang.name !== "Bahasa" ? (
+              <>Learn more about our causes.</>
+            ) : (
+              <>Pelajari lebih lanjut tentang tujuan kami.</>
+            )}
           </h2>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-1">
@@ -68,7 +77,11 @@ export default function BlogCardsLg() {
               <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
                 <a href={post.href}>
                   <span className="absolute inset-0" />
-                  {post.title}
+                  {lang.name !== "Bahasa" ? (
+                    <>{post.title}</>
+                  ) : (
+                    <>{post.titleB}</>
+                  )}
                 </a>
               </h3>
             </article>

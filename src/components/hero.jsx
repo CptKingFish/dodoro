@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { LangContext } from "@/pages/_app";
 
 export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { lang } = useContext(LangContext);
 
   return (
     <div className="bg-white">
@@ -40,25 +42,54 @@ export default function Hero() {
                 <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                   {/* A <span className="text-yellow-600">sweet</span> tradition
                   that <span className="text-yellow-600">sticks</span> with you. */}
-                  Connecting <span className="text-yellow-600">Dreams</span>,
-                  Building <span className="text-yellow-600">Futures</span>.
+                  {lang.name !== "Bahasa" ? (
+                    <>
+                      Connecting <span className="text-yellow-600">Dreams</span>
+                      , Building{" "}
+                      <span className="text-yellow-600">Futures</span>.
+                    </>
+                  ) : (
+                    <>
+                      Menghubungkan{" "}
+                      <span className="text-yellow-600">Mimpi</span>, Membangun{" "}
+                      <span className="text-yellow-600">Masa Depan</span>.
+                    </>
+                  )}
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                  Find out how we are working with local institutions and NGOs
-                  to make livelihoods easier.
+                  {lang.name !== "Bahasa" ? (
+                    <>
+                      Find out how we are working with local institutions and
+                      NGOs to make livelihoods easier.
+                    </>
+                  ) : (
+                    <>
+                      Cari tahu bagaimana kami bekerja sama dengan institusi
+                      lokal dan LSM untuk membuat penghidupan lebih mudah.
+                    </>
+                  )}
                 </p>
                 <div className="mt-10 flex items-center gap-x-6">
                   <a
                     href="#"
                     className="rounded-md bg-yellow-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
                   >
-                    Watch video
+                    {lang.name !== "Bahasa" ? (
+                      <>Watch video</>
+                    ) : (
+                      <>Menonton video</>
+                    )}
                   </a>
                   <Link
                     href="/about"
                     className="text-sm font-semibold leading-6 text-gray-900"
                   >
-                    Learn more <span aria-hidden="true">→</span>
+                    {lang.name !== "Bahasa" ? (
+                      <>Learn more</>
+                    ) : (
+                      <>Belajarlah lagi</>
+                    )}
+                    <span aria-hidden="true"> →</span>
                   </Link>
                 </div>
               </div>

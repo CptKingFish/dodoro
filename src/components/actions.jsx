@@ -7,17 +7,25 @@ import {
   UsersIcon,
 } from "@heroicons/react/24/outline";
 
+import { LangContext } from "@/pages/_app";
+import { useContext } from "react";
+
 const secondaryFeatures = [
   {
     name: "Support",
+    nameB: "Mendukung",
     description: "Support us by donating to a cause you are passionate about.",
+    descriptionB: "Dukung kami dengan berdonasi untuk tujuan yang Anda sukai.",
     href: "/support",
     icon: CircleStackIcon,
   },
   {
     name: "Volunteer",
+    nameB: "Sukarelawan",
     description:
       "Dream big, get creative and become involved. Join our regular volunteering events.",
+    descriptionB:
+      "Bermimpilah besar, jadilah kreatif dan terlibatlah. Bergabunglah dengan acara sukarelawan rutin kami.",
     href: "/volunteer",
     icon: UsersIcon,
   },
@@ -30,6 +38,7 @@ const secondaryFeatures = [
 ];
 
 export default function Actions() {
+  const { lang } = useContext(LangContext);
   return (
     <>
       {/* Feature section */}
@@ -39,10 +48,20 @@ export default function Actions() {
             Deploy faster
           </h2> */}
           <p className="mt-2 text-3xl font-bold tracking-tight text-yellow-900 sm:text-4xl">
-            Create a sizeable impact
+            {lang.name !== "Bahasa" ? (
+              <>Create a sizeable impact</>
+            ) : (
+              <>Ciptakan dampak yang cukup besar</>
+            )}
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Share love far and wide by supporting the cause today.
+            {lang.name !== "Bahasa" ? (
+              <>Share love far and wide by supporting the cause today.</>
+            ) : (
+              <>
+                Bagikan cinta secara luas dengan mendukung perjuangan hari ini.
+              </>
+            )}
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -54,16 +73,32 @@ export default function Actions() {
                     className="h-5 w-5 flex-none text-yellow-600"
                     aria-hidden="true"
                   />
-                  {feature.name}
+                  {lang.name !== "Bahasa" ? (
+                    <>{feature.name}</>
+                  ) : (
+                    <>{feature.nameB}</>
+                  )}
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                  <p className="flex-auto">{feature.description}</p>
+                  <p className="flex-auto">
+                    {" "}
+                    {lang.name !== "Bahasa" ? (
+                      <>{feature.description}</>
+                    ) : (
+                      <>{feature.descriptionB}</>
+                    )}
+                  </p>
                   <p className="mt-6">
                     <a
                       href={feature.href}
                       className="text-sm font-semibold leading-6 text-yellow-600"
                     >
-                      Learn more <span aria-hidden="true">→</span>
+                      {lang.name !== "Bahasa" ? (
+                        <>{"Learn more"}</>
+                      ) : (
+                        <>{"Belajarlah lagi"}</>
+                      )}
+                      <span aria-hidden="true">→</span>
                     </a>
                   </p>
                 </dd>
