@@ -35,16 +35,17 @@ export default function Hero() {
                   </div>
                 </div> */}
                 <h1 className="text-4xl font-bold tracking-tight text-yellow-900 sm:text-6xl mb-3">
-                  Dodoro,
+                  Middle,
                 </h1>
                 <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  A <span className="text-yellow-600">sweet</span> tradition
-                  that <span className="text-yellow-600">sticks</span> with you.
+                  {/* A <span className="text-yellow-600">sweet</span> tradition
+                  that <span className="text-yellow-600">sticks</span> with you. */}
+                  Connecting <span className="text-yellow-600">Dreams</span>,
+                  Building <span className="text-yellow-600">Futures</span>.
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                  qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                  occaecat fugiat aliqua.
+                  Find out how we are working with local institutions and NGOs
+                  to make livelihoods easier.
                 </p>
                 <div className="mt-10 flex items-center gap-x-6">
                   <a

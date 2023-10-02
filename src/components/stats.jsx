@@ -31,7 +31,7 @@ export default function Stats() {
   return (
     <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
       <img
-        src="making.png"
+        src="making_dark.png"
         alt=""
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
@@ -56,9 +56,8 @@ export default function Stats() {
             Making a difference, one step at a time
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-            ratione.
+            Join us and many other individuals in spreading kindness and making
+            the world a better place for Dodol makers.
           </p>
         </div>
         <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">

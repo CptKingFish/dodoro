@@ -249,12 +249,14 @@ export default function Volunteer() {
                                   {"Helping out at Tanete village"}
                                 </h4>
                                 <p className="mt-2 hidden text-sm text-gray-500 sm:block">
-                                  Lorem ipsum dolor sit amet, consectetur
-                                  adipisicing elit. Maxime, incidunt beatae
-                                  voluptas reiciendis dicta, labore similique
-                                  soluta repudiandae perferendis vel maiores.
-                                  Amet ducimus dolorem neque officia natus
-                                  facere cum veritatis voluptatum tenetur!
+                                  Join us in the beautiful Tanete Village for a
+                                  heartwarming volunteering event. Together,
+                                  we&apos;ll partner with local dodol makers,
+                                  sharing our skills and resources to help them
+                                  enhance their craft and improve their
+                                  livelihoods. Your contribution will make a
+                                  meaningful, lasting impact on this close-knit
+                                  community.
                                 </p>
                               </div>
                               {/* <p className="mt-1 font-medium text-gray-900 sm:ml-2 sm:mt-0">
@@ -288,9 +290,7 @@ export default function Volunteer() {
                         </div>
                         <div className="ml-4 flex-shrink-0 sm:order-first sm:m-0 sm:mr-6">
                           <img
-                            src={
-                              "https://tailwindui.com/img/ecommerce-images/order-history-page-06-product-01.jpg"
-                            }
+                            src={"us_5.jpg"}
                             className="col-start-2 col-end-3 h-20 w-20 rounded-lg object-cover object-center sm:col-start-1 sm:row-span-2 sm:row-start-1 sm:h-40 sm:w-40 lg:h-52 lg:w-52"
                           />
                         </div>
@@ -317,15 +317,17 @@ export default function Volunteer() {
                             <div className="sm:flex">
                               <div>
                                 <h4 className="font-medium text-yellow-900">
-                                  {"Clearing trash at Malino"}
+                                  {"Clearing trash at Maros Baru"}
                                 </h4>
                                 <p className="mt-2 hidden text-sm text-gray-500 sm:block">
-                                  Lorem ipsum dolor sit amet, consectetur
-                                  adipisicing elit. Maxime, incidunt beatae
-                                  voluptas reiciendis dicta, labore similique
-                                  soluta repudiandae perferendis vel maiores.
-                                  Amet ducimus dolorem neque officia natus
-                                  facere cum veritatis voluptatum tenetur!
+                                  Join our volunteer event in picturesque Maros
+                                  Baru, where we&apos;ll not only clear trash
+                                  but also support local dodol makers.
+                                  Let&apos;s preserve the environment while
+                                  helping these artisans create their sweet
+                                  treats in a cleaner, more sustainable space.
+                                  Your participation makes a meaningful
+                                  difference.
                                 </p>
                               </div>
                               {/* <p className="mt-1 font-medium text-gray-900 sm:ml-2 sm:mt-0">
@@ -364,9 +366,7 @@ export default function Volunteer() {
                         </div>
                         <div className="ml-4 flex-shrink-0 sm:order-first sm:m-0 sm:mr-6">
                           <img
-                            src={
-                              "https://tailwindui.com/img/ecommerce-images/order-history-page-06-product-01.jpg"
-                            }
+                            src={"trash.jpg"}
                             className="col-start-2 col-end-3 h-20 w-20 rounded-lg object-cover object-center sm:col-start-1 sm:row-span-2 sm:row-start-1 sm:h-40 sm:w-40 lg:h-52 lg:w-52"
                           />
                         </div>

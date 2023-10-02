@@ -11,9 +11,11 @@ function classNames(...classes) {
 }
 
 const navigation = [
+  // { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Donate", href: "/donate" },
+  { name: "Support", href: "/support" },
   { name: "Volunteer", href: "/volunteer" },
+  { name: "Shop", href: "/shop" },
   { name: "FAQ", href: "/faq" },
   { name: "Contact", href: "/contact" },
 ];
@@ -32,8 +34,8 @@ export default function Navbar() {
               <span className="sr-only">Your Company</span>
               <img
                 alt="Your Company"
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                className="h-12 w-12 w-auto"
+                src="/medium.jpg"
               />
             </Link>
 

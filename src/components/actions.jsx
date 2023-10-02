@@ -1,30 +1,31 @@
 import {
   ArrowPathIcon,
+  CircleStackIcon,
   CloudArrowUpIcon,
   LockClosedIcon,
+  ShoppingBagIcon,
+  UsersIcon,
 } from "@heroicons/react/24/outline";
 
 const secondaryFeatures = [
   {
-    name: "Donate",
-    description:
-      "Donate to our monthly fundraiser to donate to a cause you are passionate about.",
+    name: "Support",
+    description: "Support us by donating to a cause you are passionate about.",
     href: "/donate",
-    icon: CloudArrowUpIcon,
+    icon: CircleStackIcon,
   },
   {
     name: "Volunteer",
     description:
       "Dream big, get creative and become involved. Join our regular volunteering events.",
     href: "/volunteer",
-    icon: LockClosedIcon,
+    icon: UsersIcon,
   },
   {
-    name: "Contact",
-    description:
-      "Have any more questions or want to donate materials? Contact us here.",
-    href: "/contact",
-    icon: ArrowPathIcon,
+    name: "Shop",
+    description: "100% of our profits goes to supporting more Dodol makers.",
+    href: "/shop",
+    icon: ShoppingBagIcon,
   },
 ];
 
@@ -41,9 +42,7 @@ export default function Actions() {
             Create a sizeable impact
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-            Suspendisse eget egestas a elementum pulvinar et feugiat blandit at.
-            In mi viverra elit nunc.
+            Share love far and wide by supporting the cause today.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">

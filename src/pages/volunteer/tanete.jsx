@@ -23,27 +23,33 @@ import { ShieldCheckIcon } from "@heroicons/react/24/outline";
 import VolunteerInfo from "@/components/volunteer_info";
 import Footer from "@/components/footer";
 
+const reviews = { average: 4, totalCount: 1624 };
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
+
 const product = {
   name: "Helping out at Tanete village",
   href: "#",
   price: "$220",
   description:
     "Don't compromise on snack-carrying capacity with this lightweight and spacious bag. The drawstring top keeps all your favorite chips, crisps, fries, biscuits, crackers, and cookies secure.",
-  imageSrc:
-    "https://tailwindui.com/img/ecommerce-images/product-page-04-featured-product-shot.jpg",
+  imageSrc: "us_5.jpg",
   imageAlt:
     "Model wearing light green backpack with black canvas straps and front zipper pouch.",
   breadcrumbs: [],
   sizes: [
-    { name: "18L", description: "Perfect for a reasonable amount of snacks." },
-    { name: "20L", description: "Enough room for a serious amount of snacks." },
+    {
+      name: "18L",
+      description: "Perfect for a reasonable amount of snacks.",
+    },
+    {
+      name: "20L",
+      description: "Enough room for a serious amount of snacks.",
+    },
   ],
 };
-const reviews = { average: 4, totalCount: 1624 };
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function VolunteerTanete() {
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
@@ -105,10 +111,12 @@ export default function VolunteerTanete() {
                   About this event
                 </h3>
                 <p className="mt-4 text-md text-gray-500">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
-                  amet, corrupti, magni molestias repellendus est ex rem
-                  aliquid, ad tenetur harum doloremque nemo porro. Corrupti sed
-                  laborum est impedit, obcaecati hic quibusdam.
+                  Join us in the beautiful Tanete Village for a heartwarming
+                  volunteering event. Together, we&apos;ll partner with local
+                  dodol makers, sharing our skills and resources to help them
+                  enhance their craft and improve their livelihoods. Your
+                  contribution will make a meaningful, lasting impact on this
+                  close-knit community.
                 </p>
               </div>
             </section>
@@ -118,7 +126,7 @@ export default function VolunteerTanete() {
           <div className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
             <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg">
               <img
-                src={product.imageSrc}
+                src={"/us_5.jpg"}
                 alt={product.imageAlt}
                 className="h-full w-full object-cover object-center"
               />

@@ -15,7 +15,7 @@ export default function AboutContent() {
           <div className="relative h-80 lg:-ml-8 lg:h-auto lg:w-full lg:grow xl:ml-0">
             <img
               className="absolute inset-0 h-full w-full bg-gray-50 object-cover"
-              src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=2560&h=3413&&q=80"
+              src="making.png "
               alt=""
             />
           </div>
@@ -23,81 +23,44 @@ export default function AboutContent() {
         <div className="px-6 lg:contents">
           <div className="mx-auto max-w-2xl pb-24 pt-16 sm:pb-32 sm:pt-20 lg:ml-8 lg:mr-0 lg:w-full lg:max-w-lg lg:flex-none lg:pt-32 xl:w-1/2">
             <p className="text-base font-semibold leading-7 text-yellow-400">
-              About
+              About us
             </p>
-            <span className="mt-2 text-3xl font-bold tracking-tight text-yellow-900 sm:text-4xl">
-              What is Dodol?
+            <span className="mt-2 text-3xl font-bold tracking-tight text-yellow-900">
+              Who are we?
             </span>
-            <p className="mt-6 text-xl leading-8 text-gray-700">
-              Dodol, which is also referred to as Dodoro in Makassar, is a sweet
-              toffee-like sugar palm based confection. It is made with white and
-              black glutinous rice, palm sugar and coconut milk. Dodol has a
-              strong cultural significance in Indonesia and is served at
-              weddings and festivals.
+            <p className="mt-6 text-lg leading-8 text-gray-700">
+              We are a tight-knit team of five with a heartfelt mission: to
+              uplift and empower vulnerable small home-based businesses. Through
+              the support of dedicated volunteers, strategic collaborations with
+              companies, and fundraising efforts, we aim to provide these
+              business owners with the resources and opportunities they need to
+              lead better lives.
             </p>
-            <div className="mt-10 max-w-xl text-base leading-7 text-gray-700 lg:max-w-none">
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-yellow-900">
-                How is Dodol made?
+            <p className="mt-6 text-lg leading-8 text-gray-700">
+              Join us in making a positive impact on the backbone of our
+              communities
+            </p>
+            <div className="mt-10 max-w-xl leading-7 text-gray-700 lg:max-w-none text-lg">
+              <h2 className="mt-16 text-3xl font-bold tracking-tight text-yellow-900">
+                Our Mission
               </h2>
               <p className="mt-6">
-                Making dodol is a tedious and tiring manual process. There are
-                no equipments or machines that are being utilised by the dodol
-                makers and they carry out everything manually.
+                Our mission is to be a beacon of hope and support for vulnerable
+                small home-based businesses. We are dedicated to fostering their
+                growth, resilience, and prosperity by mobilizing volunteers,
+                forging strategic partnerships with companies, and raising
+                funds.
               </p>
               <p className="mt-6">
-                The cooking process itself takes 2-4 hours using firewood as the
-                longer the time taken to cook, the longer the shelf life of the
-                product. One bag of dodol is around 50grams, and is sold for
-                4000 rupiah to 5000 rupiah.
+                Through our collective efforts, we aspire to create a brighter
+                and more sustainable future for these entrepreneurs, enabling
+                them to lead fulfilling lives while enriching their communities.
               </p>
 
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-yellow-900">
+              {/* <h2 className="mt-16 text-3xl font-bold tracking-tight text-yellow-900">
                 The cooking process
-              </h2>
+              </h2> */}
 
-              <ul role="list" className="mt-8 space-y-8 text-gray-900">
-                <li className="flex gap-x-3">
-                  <MoonIcon
-                    className="mt-1 h-5 w-5 flex-none text-yellow-600"
-                    aria-hidden="true"
-                  />
-                  <span>
-                    {/* <strong className="font-semibold text-gray-900">
-                      Push to deploy.
-                    </strong>{" "} */}
-                    The cooking process kicks off with soaking the glutinous
-                    rice overnight, milled into powder and dried under the sun.
-                  </span>
-                </li>
-                <li className="flex gap-x-3">
-                  <HandRaisedIcon
-                    className="mt-1 h-5 w-5 flex-none text-yellow-600"
-                    aria-hidden="true"
-                  />
-                  <span>
-                    {/* <strong className="font-semibold text-gray-900">
-                      SSL certificates.
-                    </strong>{" "} */}
-                    Coconut milk is squeezed from fresh coconuts manually, by
-                    hands.
-                  </span>
-                </li>
-                <li className="flex gap-x-3">
-                  <FireIcon
-                    className="mt-1 h-5 w-5 flex-none text-yellow-600"
-                    aria-hidden="true"
-                  />
-                  <span>
-                    {/* <strong className="font-semibold text-gray-900">
-                      Database backups.
-                    </strong>{" "} */}
-                    Then, all the other ingredients are added inside and placed
-                    to cook using firewood and the dodol makers have to stir
-                    continuously for hours to prevent the dodol from being
-                    burnt.
-                  </span>
-                </li>
-              </ul>
               {/* <p className="mt-8">
                 Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis
                 odio id et. Id blandit molestie auctor fermentum dignissim.
