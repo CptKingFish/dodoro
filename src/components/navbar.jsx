@@ -101,7 +101,7 @@ export default function Navbar() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
-                  <Link
+                  <a
                     key={item.name}
                     href={item.href}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
@@ -111,7 +111,7 @@ export default function Navbar() {
                     ) : (
                       <>{item.nameb}</>
                     )}
-                  </Link>
+                  </a>
                 ))}
               </div>
               <div className="py-6">
