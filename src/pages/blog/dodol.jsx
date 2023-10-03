@@ -12,6 +12,7 @@ import {
 
 import { LangContext } from "@/pages/_app";
 import { useContext } from "react";
+import YouTubePlayer from "@/components/YoutubePlayer";
 
 export default function BlogDodol() {
   const { lang } = useContext(LangContext);
@@ -94,6 +95,9 @@ export default function BlogDodol() {
                     </span>
                   </figcaption>
                 </figure>
+              </div>
+              <div className="mt-10 pt-10">
+                <YouTubePlayer videoId={"fjM0wD3y9Bw"} />
               </div>
             </div>
             <div className="mt-8 lg:mt-0">

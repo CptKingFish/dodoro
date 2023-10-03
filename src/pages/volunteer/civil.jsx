@@ -20,6 +20,7 @@ import {
   UserCircleIcon,
 } from "@heroicons/react/20/solid";
 import { ClockIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import YouTubePlayer from "@/components/YoutubePlayer";
 
 const reviews = { average: 4, totalCount: 1624 };
 
@@ -194,6 +195,7 @@ export default function VolunteerCivil() {
                 </p>
               </div>
             </section>
+
             <div className="w-full mt-5 inline-flex items-center rounded-md bg-yellow-50 px-2 py-5 text-sm font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
               <UsersIcon className="w-10 h-10 mr-5" />
               {lang.name !== "Bahasa" ? (
@@ -201,6 +203,9 @@ export default function VolunteerCivil() {
               ) : (
                 <>16 relawan telah mendaftar.</>
               )}
+            </div>
+            <div className="mt-10 pt-10">
+              <YouTubePlayer videoId={"fjM0wD3y9Bw"} />
             </div>
           </div>
 
@@ -225,7 +230,7 @@ export default function VolunteerCivil() {
           </div>
 
           {/* Product form */}
-          <div className="mt-10 sm:mt-12 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start lg:-mt-[500px]">
+          <div className="mt-10 sm:mt-12 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start lg:-mt-[300px]">
             <section aria-labelledby="options-heading">
               <h2 id="options-heading" className="sr-only">
                 Product options
