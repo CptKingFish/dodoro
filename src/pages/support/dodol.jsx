@@ -13,7 +13,7 @@ import BlogCardsSm from "@/components/blog_cards_sm";
 import { LangContext } from "@/pages/_app";
 import { useContext } from "react";
 import ProductCard from "@/components/product_card";
-import YouTubePlayer from "@/components/youtubeplayer";
+import YouTubePlayer from "@/components/YoutubePlayer";
 
 const product = {
   name: "Support Dodol makers",
