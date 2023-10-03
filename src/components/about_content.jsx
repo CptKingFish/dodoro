@@ -44,13 +44,12 @@ export default function AboutContent() {
                 </>
               ) : (
                 <>
-                  Kami adalah tim erat beranggotakan lima orang dengan misi
-                  sepenuh hati: untuk mengangkat dan memberdayakan usaha kecil
-                  berbasis rumahan yang rentan. Melalui dukungan relawan yang
-                  berdedikasi, kolaborasi strategis dengan perusahaan, dan upaya
-                  penggalangan dana, kami bertujuan untuk menyediakannya pemilik
-                  bisnis dengan sumber daya dan peluang yang mereka perlukan
-                  untuk menjalani kehidupan yang lebih baik.
+                  Kami adalah tim beranggotakan lima orang dengan misi sepenuh
+                  hati: untuk mengangkat dan memberdayakan UMKM. Melalui
+                  dukungan relawan yang berdedikasi, kolaborasi strategis dengan
+                  perusahaan, dan upaya penggalangan dana, kami bertujuan untuk
+                  menyediakan sumber daya dan peluang yang mereka perlukan untuk
+                  menjalani kehidupan yang lebih baik.
                 </>
               )}
             </p>
@@ -63,7 +62,7 @@ export default function AboutContent() {
               ) : (
                 <>
                   Bergabunglah bersama kami dalam memberikan dampak positif pada
-                  tulang punggung komunitas kami
+                  mereka.
                 </>
               )}
             </p>
@@ -82,12 +81,11 @@ export default function AboutContent() {
                   </>
                 ) : (
                   <>
-                    Misi kami adalah menjadi mercusuar harapan dan dukungan bagi
-                    kelompok rentan usaha kecil berbasis rumahan. Kami
-                    berdedikasi untuk membina mereka pertumbuhan, ketahanan, dan
-                    kesejahteraan dengan memobilisasi sukarelawan, menjalin
-                    kemitraan strategis dengan perusahaan, dan meningkatkan
-                    dana.
+                    Misi kami adalah menjadi harapan dan dukungan bagi kelompok
+                    UMKM. Kami berdedikasi untuk membina mereka berkembang,
+                    bertahan, dan sejahtera dengan memobilisasi sukarelawan,
+                    menjalin kemitraan strategis dengan perusahaan, dan
+                    meningkatkan dana.
                   </>
                 )}
               </p>
@@ -103,9 +101,9 @@ export default function AboutContent() {
                   <>
                     Melalui upaya kolektif kami, kami bercita-cita untuk
                     menciptakan masa depan yang lebih cerah dan lebih
-                    berkelanjutan untuk hal ini wirausahawan, memungkinkan
-                    mereka menjalani kehidupan yang memuaskan sekaligus
-                    memperkaya komunitas mereka.
+                    berkelanjutan untuk mereka berwirausaha, memungkinkan mereka
+                    menjalani kehidupan yang lebih baik sekaligus
+                    mensejahterakam mereka.
                   </>
                 )}
               </p>

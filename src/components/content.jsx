@@ -23,9 +23,8 @@ export default function Content() {
                 </>
               ) : (
                 <>
-                  Kami adalah tim erat beranggotakan lima orang dengan misi
-                  sepenuh hati: untuk mengangkat dan memberdayakan usaha kecil
-                  berbasis rumahan yang rentan.
+                  Kami adalah tim yang beranggotakan lima orang dengan misi yang
+                  tulus: untuk mengangkat dan mendukung UMKM.
                 </>
               )}
             </p>
@@ -40,12 +39,12 @@ export default function Content() {
                 </>
               ) : (
                 <>
-                  Melalui dukungan relawan yang berdedikasi, kolaborasi
-                  strategis dengan perusahaan, dan upaya penggalangan dana, kami
-                  bertujuan untuk menyediakan sumber daya dan peluang yang
-                  dibutuhkan para pemilik bisnis ini untuk menjalani kehidupan
-                  yang lebih baik. Bergabunglah bersama kami dalam memberikan
-                  dampak positif pada tulang punggung komunitas kami.
+                  Melalui dukungan anda yang berdedikasi, kolaborasi strategis
+                  dengan perusahaan, dan upaya penggalangan dana, kami bertujuan
+                  untuk menyediakan sumber daya dan peluang yang dibutuhkan para
+                  pemilik bisnis ini untuk menjalani kehidupan yang lebih baik.
+                  Bergabunglah bersama kami dalam memberikan dampak positif pada
+                  meraka yang membutuhkam.
                 </>
               )}
             </p>

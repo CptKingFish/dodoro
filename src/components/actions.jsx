@@ -26,7 +26,7 @@ const secondaryFeatures = [
     description:
       "Dream big, get creative and become involved. Join our regular volunteering events.",
     descriptionB:
-      "Bermimpilah besar, jadilah kreatif dan terlibatlah. Bergabunglah dengan acara sukarelawan rutin kami.",
+      "Bermimpilah, jadilah kreatif dan terlibatlah. Bergabunglah dengan kami.",
     href: "/volunteer",
     icon: UsersIcon,
   },
@@ -97,7 +97,7 @@ export default function Actions() {
                       {lang.name !== "Bahasa" ? (
                         <>{"Learn more"}</>
                       ) : (
-                        <>{"Belajarlah lagi"}</>
+                        <>{"Lihatlah selengkapnya"}</>
                       )}
                       <span aria-hidden="true">→</span>
                     </Link>

@@ -6,18 +6,18 @@ import { useContext } from "react";
 const projects = [
   {
     name: "25,000IDR can feed a Dodol maker for a day.",
-    nameB: "25,000IDR bisa memberi makan pembuat Dodol sehari.",
+    nameB: "Rp25,000 bisa memberi makan pembuat Dodol sehari.",
     initials: "25,000",
-    currency: "IDR",
+    currency: "Rp",
     href: "#",
     members: 16,
     bgColor: "bg-pink-600",
   },
   {
     name: "50,000IDR can feed a Dodol maker's family for a day.",
-    nameB: "50,000IDR bisa memberi makan keluarga pembuat Dodol sehari.",
+    nameB: "Rp50,000 bisa memberi makan keluarga pembuat Dodol sehari.",
     initials: "50,000",
-    currency: "IDR",
+    currency: "Rp",
     href: "#",
     members: 12,
     bgColor: "bg-purple-600",
@@ -25,9 +25,9 @@ const projects = [
   {
     name: "100,000IDR can buy medical supplies for the Dodol makers.",
     nameB:
-      "100,000IDR dapat membeli perbekalan kesehatan bagi para pembuat Dodol.",
+      "Rp100,000 dapat membeli perbekalan kesehatan bagi para pembuat Dodol.",
     initials: "100,000",
-    currency: "IDR",
+    currency: "Rp",
     href: "#",
     members: 16,
     bgColor: "bg-yellow-500",
@@ -35,9 +35,9 @@ const projects = [
   {
     name: "200,000IDR can purchase a health insurance plan for a Dodol maker.",
     nameB:
-      "200,000IDR dapat membeli paket asuransi kesehatan untuk pembuat Dodol.",
+      "Rp200,000 dapat membeli paket asuransi kesehatan untuk pembuat Dodol.",
     initials: "200,000",
-    currency: "IDR",
+    currency: "Rp",
     href: "#",
     members: 8,
     bgColor: "bg-green-500",

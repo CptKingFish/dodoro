@@ -90,13 +90,13 @@ export default function Donate() {
                 <h4 className="sr-only">Status</h4>
                 <p>
                   <span className="text-2xl font-bold text-yellow-900">
-                    {lang.name !== "Bahasa" ? <>$3621</> : <>41,050,770 IDR</>}{" "}
+                    {lang.name !== "Bahasa" ? <>$3621</> : <>Rp41,050,770</>}{" "}
                   </span>
                   <span className="text-lg font-medium text-gray-900">
                     {lang.name !== "Bahasa" ? (
                       <>raised from 47 donors</>
                     ) : (
-                      <>terkumpul dari 47 donatur</>
+                      <>terkumpul dari 47 orang</>
                     )}
                   </span>
                 </p>
@@ -113,7 +113,7 @@ export default function Donate() {
                       {lang.name !== "Bahasa" ? (
                         <>72% of $5,000</>
                       ) : (
-                        <>72% dari $5.000</>
+                        <>72% dari Rp41,050,770</>
                       )}
                     </div>
                     <div

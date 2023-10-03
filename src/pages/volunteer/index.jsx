@@ -87,13 +87,12 @@ export default function Volunteer() {
                                       Bergabunglah dengan kami di Desa Tanete
                                       yang indah untuk acara sukarelawan yang
                                       mengharukan. Bersama-sama, kami akan
-                                      bermitra dengan lokal pembuat dodol,
+                                      bermitra dengan pembuat dodol lagi,
                                       berbagi keahlian dan sumber daya untuk
                                       membantu mereka meningkatkan keterampilan
                                       mereka dan meningkatkan penghidupan
-                                      mereka. Milikmu kontribusinya akan
-                                      memberikan arti, dampak jangka panjang
-                                      pada hubungan erat ini masyarakat.
+                                      mereka. Kontribusimu akan memberikan arti
+                                      dan dampak jangka panjang.
                                     </>
                                   )}
                                 </p>
@@ -127,7 +126,7 @@ export default function Volunteer() {
                               {lang.name !== "Bahasa" ? (
                                 <>Learn More</>
                               ) : (
-                                <>Belajarlah lagi</>
+                                <>Lihad slengkapnya</>
                               )}{" "}
                               →
                             </Link>
@@ -183,15 +182,15 @@ export default function Volunteer() {
                                     </>
                                   ) : (
                                     <>
-                                      Bergabunglah dalam acara sukarelawan kami
-                                      di Maros yang indah Baru, tempat kami
-                                      tidak hanya membersihkan sampah namun juga
+                                      Bergabunglah degan acara sukarelawan kami
+                                      di Maros yang indah, tempat kami tidak
+                                      hanya membersihkan sampah namun juga
                                       mendukung pembuat dodol lokal. Mari
                                       lestarikan lingkungan selagi membantu para
-                                      pengrajin ini membuat manisan mereka
-                                      suguhan di tempat yang lebih bersih dan
-                                      ramah lingkungan. Partisipasi Anda sangat
-                                      berarti perbedaan.
+                                      pengrajin ini membuat dodol mereka di
+                                      tempat yang lebih bersih dan ramah
+                                      lingkungan. Partisipasi Anda sangat
+                                      berarti.
                                     </>
                                   )}
                                 </p>

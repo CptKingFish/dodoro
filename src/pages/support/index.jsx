@@ -39,9 +39,7 @@ export default function Support() {
                     Support us by donating to a cause you are passionate about.
                   </>
                 ) : (
-                  <>
-                    Dukung kami dengan berdonasi untuk tujuan yang Anda sukai.
-                  </>
+                  <>Dukung kami dengan berdonasi.</>
                 )}
               </p>
             </div>
@@ -86,14 +84,12 @@ export default function Support() {
                                   ) : (
                                     <>
                                       Mari bersama kami mendukung para pembuat
-                                      dodol. Milikmu kontribusi sangat membantu
-                                      dalam meningkatkan kondisi kerja mereka,
-                                      memberdayakan terampil pengrajin, dan
-                                      melestarikan tradisi yang disayangi.
-                                      Bergabunglah dengan kami hari ini dan
-                                      jadilah bagian dari ini perjalanan yang
-                                      mengharukan untuk membuat yang manis dan
-                                      perubahan yang langgeng.
+                                      dodol. Kontribusimu sangat membantu dalam
+                                      meningkatkan kondisi kerja mereka,
+                                      memberdayakan keterampilian pengrajin, dan
+                                      melestarikan tradisi. Bergabunglah dengan
+                                      kami hari ini dan jadilah bagian dari
+                                      perjalanan ini untuk membuat perubahan.
                                     </>
                                   )}
                                 </p>
@@ -104,7 +100,7 @@ export default function Support() {
                                 {lang.name !== "Bahasa" ? (
                                   <>$3621 raised from 47 donors</>
                                 ) : (
-                                  <>41,032,026 IDR dikumpulkan dari 47 donor</>
+                                  <>Rp41,032,026 dikumpulkan dari 47 orang</>
                                 )}
                               </span>
                               <div className="ml-4 border-l border-gray-200 pl-4 sm:ml-6 sm:pl-6">
@@ -126,7 +122,7 @@ export default function Support() {
                               {lang.name !== "Bahasa" ? (
                                 <>Learn More</>
                               ) : (
-                                <>Belajarlah lagi</>
+                                <>Selengkapnya</>
                               )}{" "}
                               →
                             </Link>
@@ -161,7 +157,11 @@ export default function Support() {
                             <div className="sm:flex">
                               <div>
                                 <h4 className="font-medium text-yellow-900">
-                                  {"Support rice farmers"}
+                                  {lang.name !== "Bahasa" ? (
+                                    <>Support rice farmers</>
+                                  ) : (
+                                    <>Dukung petani</>
+                                  )}
                                 </h4>
                                 <p className="mt-2 hidden text-sm text-gray-500 sm:block">
                                   {lang.name !== "Bahasa" ? (
@@ -178,13 +178,12 @@ export default function Support() {
                                   ) : (
                                     <>
                                       Mari bersama kami dalam mendukung petani
-                                      padi. Milikmu kontribusi sangat membantu
+                                      padi. Bagimu kontribusi sangat membantu
                                       dalam meningkatkan kondisi kerja mereka,
                                       dan pelestarian tradisi yang dijunjung
                                       tinggi. Bergabunglah dengan kami hari ini
-                                      dan jadilah a bagian dari perjalanan yang
-                                      mengharukan ini untuk membuat a perubahan
-                                      yang manis dan abadi.
+                                      dan jadilah bagian dari perjalanan yang
+                                      mengharukan ini untuk membuat perubahan.
                                     </>
                                   )}
                                 </p>
@@ -195,7 +194,7 @@ export default function Support() {
                                 {lang.name !== "Bahasa" ? (
                                   <>$1231 raised from 12 donors</>
                                 ) : (
-                                  <>13,949,097 IDR dikumpulkan dari 12 donor</>
+                                  <>Rp13,949,097 dikumpulkan dari 12 orang</>
                                 )}
                               </span>
                               <div className="ml-4 border-l border-gray-200 pl-4 sm:ml-6 sm:pl-6">
@@ -226,7 +225,7 @@ export default function Support() {
                                   {lang.name !== "Bahasa" ? (
                                     <>$1231</>
                                   ) : (
-                                    <>13,949,097 IDR.</>
+                                    <>Rp13,949,097.</>
                                   )}
                                 </span>{" "}
                                 {lang.name !== "Bahasa" ? <> raised.</> : <></>}

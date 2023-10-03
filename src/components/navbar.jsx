@@ -15,9 +15,9 @@ function classNames(...classes) {
 }
 
 const navigation = [
-  { name: "Home", nameb: "Rumah", href: "/" },
-  { name: "About", nameb: "Tentang", href: "/about" },
-  { name: "Support", nameb: "Mendukung", href: "/support" },
+  { name: "Home", nameb: "Beranda", href: "/" },
+  { name: "About", nameb: "Info", href: "/about" },
+  { name: "Support", nameb: "Bantuan", href: "/support" },
   { name: "Volunteer", nameb: "Sukarelawan", href: "/volunteer" },
   { name: "Contact", nameb: "Kontak", href: "/contact" },
 ];

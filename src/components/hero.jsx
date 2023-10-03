@@ -24,24 +24,10 @@ export default function Hero() {
 
             <div className="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
               <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
-                {/* <div className="hidden sm:mb-10 sm:flex">
-                  <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                    Anim aute id magna aliqua ad ad non deserunt sunt.{" "}
-                    <a
-                      href="#"
-                      className="whitespace-nowrap font-semibold text-yellow-900"
-                    >
-                      <span className="absolute inset-0" aria-hidden="true" />
-                      Read more <span aria-hidden="true">&rarr;</span>
-                    </a>
-                  </div>
-                </div> */}
                 <h1 className="text-4xl font-bold tracking-tight text-yellow-900 sm:text-6xl mb-3">
                   Middle,
                 </h1>
                 <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  {/* A <span className="text-yellow-600">sweet</span> tradition
-                  that <span className="text-yellow-600">sticks</span> with you. */}
                   {lang.name !== "Bahasa" ? (
                     <>
                       Connecting <span className="text-yellow-600">Dreams</span>
@@ -65,7 +51,7 @@ export default function Hero() {
                   ) : (
                     <>
                       Cari tahu bagaimana kami bekerja sama dengan institusi
-                      lokal dan LSM untuk membuat penghidupan lebih mudah.
+                      lokal dan LSM untuk membuat kehidupan lebih mudah.
                     </>
                   )}
                 </p>
@@ -77,7 +63,7 @@ export default function Hero() {
                     {lang.name !== "Bahasa" ? (
                       <>Watch video</>
                     ) : (
-                      <>Menonton video</>
+                      <>Tonton video</>
                     )}
                   </a>
                   <Link
@@ -87,7 +73,7 @@ export default function Hero() {
                     {lang.name !== "Bahasa" ? (
                       <>Learn more</>
                     ) : (
-                      <>Belajarlah lagi</>
+                      <>Pelajari lagi</>
                     )}
                     <span aria-hidden="true"> →</span>
                   </Link>

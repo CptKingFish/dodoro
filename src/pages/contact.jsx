@@ -16,7 +16,7 @@ export default function Contact() {
                   {lang.name !== "Bahasa" ? (
                     <>Get in touch</>
                   ) : (
-                    <>Berhubungan</>
+                    <>Hubungi kami</>
                   )}
                 </h2>
                 <p className="mt-4 leading-7 text-gray-600">
@@ -136,10 +136,7 @@ export default function Contact() {
                   {lang.name !== "Bahasa" ? (
                     <>You can visit us at locations in the USA and Indonesia.</>
                   ) : (
-                    <>
-                      Anda dapat mengunjungi kami di lokasi di Amerika dan
-                      Indonesia.
-                    </>
+                    <>Anda dapat mengunjungi kami di lokasi di Indonesia.</>
                   )}
                 </p>
               </div>

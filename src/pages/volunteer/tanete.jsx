@@ -122,13 +122,13 @@ export default function VolunteerTanete() {
                   ) : (
                     <>
                       Bergabunglah bersama kami di Desa Tanete yang indah untuk
-                      pengalaman yang menghangatkan hati acara sukarela.
-                      Bersama-sama, kami akan bermitra dengan lokal pembuat
-                      dodol, berbagi keterampilan dan sumber daya kami untuk
-                      membantu mereka meningkatkan keterampilan mereka dan
-                      meningkatkan penghidupan mereka. Milikmu kontribusinya
-                      akan memberikan dampak yang berarti dan bertahan lama
-                      dalam hal ini komunitas yang erat.
+                      pengalaman yang menghangatkan hati kalian. Bersama-sama,
+                      kami akan bermitra dengan pembuat dodol lokal, berbagi
+                      keterampilan dan sumber daya kami untuk membantu mereka
+                      meningkatkan keterampilan mereka dan meningkatkan
+                      penghidupan mereka. Kontribusimu akan memberikan dampak
+                      yang berarti dan bertahan lama dalam hal ini komunitas
+                      yang erat.
                     </>
                   )}
                 </p>

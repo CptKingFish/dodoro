@@ -119,8 +119,8 @@ export default function BlogDodol() {
                     Dodol, juga dikenal sebagai Dodoro di Makassar, adalah
                     makanan tradisional kembang gula yang berasal dari
                     Indonesia, berbahan dasar gula pasir kelapa sawit, beras
-                    ketan putih dan hitam, gula aren, dan kelapa susu. Penganan
-                    ini memiliki arti penting budaya yang signifikan Indonesia
+                    ketan putih dan hitam, gula aren, dan satan. Penganan ini
+                    memiliki arti penting budaya yang signifikan di Indonesia
                     sering menghiasi meja pesta pernikahan dan festival.
                   </>
                 )}
@@ -143,9 +143,9 @@ export default function BlogDodol() {
                     </>
                   ) : (
                     <>
-                      Pembuatan dodol dilakukan secara manual dan padat karya
-                      proses. Pembuat dodol menghindari penggunaan mesin atau
-                      peralatan khusus, dan memilih praktik langsung keahlian.
+                      Pembuatan dodol dilakukan secara manual dan waktu yang
+                      lama. Pembuat dodol menghindari penggunaan mesin atau
+                      peralatan khusus, dan cara yang lama.
                     </>
                   )}
                 </p>
@@ -164,9 +164,9 @@ export default function BlogDodol() {
                       Prosedur memasaknya sendiri berlangsung selama 2-4 jam,
                       menggunakan kayu bakar untuk memudahkan prosesnya. Lebih
                       panjang waktu memasak berkontribusi pada perpanjangan umur
-                      simpan produk akhir. Biasanya, sekantong dodol memiliki
-                      berat kurang lebih 50 gram dan dijual dengan harga 4000
-                      hingga 5000 rupiah.
+                      produk dodol. Biasanya, sekantong dodol memiliki berat
+                      kurang lebih 50 gram dan dijual dengan harga 4000 hingga
+                      5000 rupiah.
                     </>
                   )}
                 </p>
@@ -264,9 +264,9 @@ export default function BlogDodol() {
                     <>
                       Membuat Dodol tidaklah mudah. Para pembuat dodol menderita
                       sakit pinggang rasa sakit, iritasi mata, kesulitan
-                      bernapas dan lain-lain karena pembuatannya dodol. Kompor
+                      bernapas dan lain-lain karena pembuatan dodol. Kompor
                       mereka diposisikan dekat dengan tanah mereka harus
-                      membungkuk sambil mengerahkan tenaga untuk mengaduknya
+                      membungkuk sambil mengerahkan tenaga untuk mengaduk
                       Campuran dodol.
                     </>
                   )}
@@ -282,12 +282,12 @@ export default function BlogDodol() {
                     </>
                   ) : (
                     <>
-                      Selain itu, mereka harus mengaduk ramuan tersebut selama
+                      Selain itu, mereka harus mengaduk dodol tersebut selama
                       berjam-jam pada akhirnya dalam posisi canggung yang sama
                       yang mengarah pada mereka mengalami sakit punggung. Saat
-                      mereka mengaduk ramuan, asapnya menjadi abu bangkit dari
-                      wajan akan melukai mata mereka dan mempengaruhi mata
-                      mereka prestasi kerja juga.
+                      mereka mengaduk dodol, asapnya menjadi abu dari wajan akan
+                      melukai mata mereka dan mempengaruhi mata mereka kinerja
+                      kerja juga.
                     </>
                   )}
                 </p>
