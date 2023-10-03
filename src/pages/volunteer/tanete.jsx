@@ -3,6 +3,7 @@ import {
   CheckIcon,
   QuestionMarkCircleIcon,
   StarIcon,
+  UsersIcon,
 } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
 import { ShieldCheckIcon } from "@heroicons/react/24/outline";
@@ -134,6 +135,50 @@ export default function VolunteerTanete() {
                 </p>
               </div>
             </section>
+            <div className="w-full mt-5 inline-flex items-center rounded-md bg-yellow-50 px-2 py-5 text-sm font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
+              <UsersIcon className="w-10 h-10 mr-5" />
+              {lang.name !== "Bahasa" ? (
+                <>24 volunteers have signed up.</>
+              ) : (
+                <>24 relawan telah mendaftar.</>
+              )}
+            </div>
+            <div className="flex mt-12">
+              {/* Size selector */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6 text-gray-700 mr-3"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                />
+              </svg>
+              <span className="text-gray-700">
+                {lang.name !== "Bahasa" ? (
+                  <>Sign up before 30 Jan 2023, 00:00 AM</>
+                ) : (
+                  <>Daftar sebelum 30 Jan 2023, 00:00</>
+                )}
+              </span>
+            </div>
+            <div className="mt-10">
+              <button
+                type="submit"
+                className="flex w-full items-center justify-center rounded-md border border-transparent bg-yellow-800 px-8 py-3 text-base font-medium text-white hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+              >
+                {lang.name !== "Bahasa" ? (
+                  <>Volunteer Now</>
+                ) : (
+                  <>Relawan Sekarang</>
+                )}
+              </button>
+            </div>
           </div>
 
           {/* Product image */}
@@ -145,67 +190,25 @@ export default function VolunteerTanete() {
                 className="h-full w-full object-cover object-center"
               />
             </div>
+            <div className="overflow-hidden rounded-lg mt-5">
+              <img
+                src={"/poster.jpg"}
+                className="h-full w-full object-cover object-center"
+              />
+            </div>
             <div className="hidden lg:block mt-8">
               <BlogCardsSm />
             </div>
           </div>
 
           {/* Product form */}
-          <div className="mt-5 sm:mt-0 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
+          <div className="mt-10 sm:mt-12 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start lg:-mt-[500px]">
             <section aria-labelledby="options-heading">
               <h2 id="options-heading" className="sr-only">
                 Product options
               </h2>
 
               <form>
-                <div className="flex">
-                  {/* Size selector */}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6 text-gray-700 mr-3"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
-                    />
-                  </svg>
-                  <span className="text-gray-700">
-                    {lang.name !== "Bahasa" ? (
-                      <>Sign up before 30 Jan 2023, 00:00 AM</>
-                    ) : (
-                      <>Daftar sebelum 30 Jan 2023, 00:00</>
-                    )}
-                  </span>
-                </div>
-                {/* <div className="mt-4">
-                <a
-                  href="#"
-                  className="group inline-flex text-sm text-gray-500 hover:text-gray-700"
-                >
-                  <span>What size should I buy?</span>
-                  <QuestionMarkCircleIcon
-                    className="ml-2 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
-                    aria-hidden="true"
-                  />
-                </a>
-              </div> */}
-                <div className="mt-10">
-                  <button
-                    type="submit"
-                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-yellow-800 px-8 py-3 text-base font-medium text-white hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-50"
-                  >
-                    {lang.name !== "Bahasa" ? (
-                      <>Volunteer Now</>
-                    ) : (
-                      <>Relawan Sekarang</>
-                    )}
-                  </button>
-                </div>
                 <div className="block lg:hidden mt-8">
                   <BlogCardsSm />
                 </div>

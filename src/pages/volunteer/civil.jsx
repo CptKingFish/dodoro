@@ -3,48 +3,61 @@ import {
   CheckIcon,
   QuestionMarkCircleIcon,
   StarIcon,
+  UserIcon,
+  UsersIcon,
 } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
 import { ShieldCheckIcon } from "@heroicons/react/24/outline";
+import VolunteerInfo from "@/components/volunteer_info";
 import Footer from "@/components/footer";
-import DonationCards from "@/components/donation_cards";
 import BlogCardsSm from "@/components/blog_cards_sm";
 
 import { LangContext } from "@/pages/_app";
 import { useContext } from "react";
-import ProductCard from "@/components/product_card";
+import {
+  CalendarDaysIcon,
+  CreditCardIcon,
+  UserCircleIcon,
+} from "@heroicons/react/20/solid";
+import { ClockIcon, MapPinIcon } from "@heroicons/react/24/outline";
 
-const product = {
-  name: "Support Dodol makers",
-  href: "#",
-  price: "$220",
-  description:
-    "Don't compromise on snack-carrying capacity with this lightweight and spacious bag. The drawstring top keeps all your favorite chips, crisps, fries, biscuits, crackers, and cookies secure.",
-  imageSrc: "/ibus.jpg",
-  imageAlt:
-    "Model wearing light green backpack with black canvas straps and front zipper pouch.",
-  breadcrumbs: [],
-  sizes: [
-    { name: "18L", description: "Perfect for a reasonable amount of snacks." },
-    { name: "20L", description: "Enough room for a serious amount of snacks." },
-  ],
-};
 const reviews = { average: 4, totalCount: 1624 };
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Donate() {
-  const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
+const product = {
+  name: "Helping out at Tanete village",
+  href: "#",
+  price: "$220",
+  description:
+    "Don't compromise on snack-carrying capacity with this lightweight and spacious bag. The drawstring top keeps all your favorite chips, crisps, fries, biscuits, crackers, and cookies secure.",
+  imageSrc: "civil.jpg",
+  imageAlt:
+    "Model wearing light green backpack with black canvas straps and front zipper pouch.",
+  breadcrumbs: [],
+  sizes: [
+    {
+      name: "18L",
+      description: "Perfect for a reasonable amount of snacks.",
+    },
+    {
+      name: "20L",
+      description: "Enough room for a serious amount of snacks.",
+    },
+  ],
+};
+
+export default function VolunteerCivil() {
   const { lang } = useContext(LangContext);
 
   return (
     <>
       <div className="bg-white">
-        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+        <div className="mx-auto max-w-2xl px-4 py-12 pt-24 sm:px-6 sm:py-18 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           {/* Product details */}
-          <div className="lg:max-w-lg lg:self-end">
+          <div className="lg:max-w-lg lg:self-start mt-4  ">
             <nav aria-label="Breadcrumb">
               <ol role="list" className="flex items-center space-x-2">
                 {product.breadcrumbs.map((breadcrumb, breadcrumbIdx) => (
@@ -75,9 +88,12 @@ export default function Donate() {
             <div className="mt-4">
               <h1 className="text-3xl font-bold tracking-tight text-yellow-900 sm:text-4xl">
                 {lang.name !== "Bahasa" ? (
-                  <>Support Dodol makers</>
+                  <>Creating a better environment for Dodol makers</>
                 ) : (
-                  <>Dukung pembuat Dodol</>
+                  <>
+                    Menciptakan lingkungan yang lebih baik bagi para pembuat
+                    dodol
+                  </>
                 )}
               </h1>
             </div>
@@ -88,102 +104,111 @@ export default function Donate() {
               </h2>
 
               <div className="mt-12 border-gray-200 ">
-                <h4 className="sr-only">Status</h4>
-                <p>
-                  <span className="text-2xl font-bold text-yellow-900">
-                    {lang.name !== "Bahasa" ? <>$3621</> : <>Rp41,050,770</>}{" "}
-                  </span>
-                  <span className="text-lg font-medium text-gray-900">
-                    {lang.name !== "Bahasa" ? (
-                      <>raised from 47 donors</>
-                    ) : (
-                      <>terkumpul dari 47 orang</>
-                    )}
-                  </span>
-                </p>
-                <div className="mt-6" aria-hidden="true">
-                  <div className="overflow-hidden rounded-full bg-gray-200">
-                    <div
-                      className="h-2 rounded-full bg-yellow-300"
-                      style={{ width: `calc((${2} * 2 + 1) / 8 * 100%)` }}
-                    />
-                  </div>
-                  <div className="mt-6 grid-cols-4 text-sm font-medium text-gray-600 grid">
-                    <div className="text-yellow-800 text-lg">
-                      {" "}
-                      {lang.name !== "Bahasa" ? (
-                        <>72% of $5,000</>
-                      ) : (
-                        <>72% dari Rp41,050,770</>
-                      )}
-                    </div>
-                    <div
-                      className={classNames(
-                        2 > 0 ? "text-indigo-600" : "",
-                        "text-center"
-                      )}
-                    ></div>
-                    <div
-                      className={classNames(
-                        2 > 1 ? "text-indigo-600" : "",
-                        "text-center"
-                      )}
-                    ></div>
-                    <div
-                      className={classNames(
-                        2 > 2 ? "text-indigo-600" : "",
-                        "text-right",
-                        "text-lg"
-                      )}
-                    >
-                      {lang.name !== "Bahasa" ? (
-                        <>21 more days</>
-                      ) : (
-                        <>21 hari lagi</>
-                      )}
-                    </div>
+                <div className="lg:col-start-3 lg:row-end-1">
+                  <h2 className="sr-only">Summary</h2>
+                  <div className="rounded-lg bg-gray-50 shadow-sm ring-1 ring-gray-900/5">
+                    <dl className="flex flex-wrap">
+                      <div className="mt-4 flex w-full flex-none gap-x-4 px-6">
+                        <dt className="flex-none">
+                          <span className="sr-only">Due date</span>
+                          <CalendarDaysIcon
+                            className="h-6 w-5  text-yellow-700"
+                            aria-hidden="true"
+                          />
+                        </dt>
+                        <dd className="leading-6 font-semibold">
+                          <time dateTime="2023-01-31">
+                            {lang.name !== "Bahasa" ? (
+                              <>October 16, 2023</>
+                            ) : (
+                              <>16 Oktober 2023</>
+                            )}
+                          </time>
+                        </dd>
+                      </div>
+                      <div className="mt-4 flex w-full flex-none gap-x-4 px-6">
+                        <dt className="flex-none">
+                          <span className="sr-only">Status</span>
+                          <ClockIcon
+                            className="h-6 w-5 text-yellow-700"
+                            aria-hidden="true"
+                          />
+                        </dt>
+                        <dd className="leading-6 font-semibold">
+                          6:00AM - 6:00PM
+                        </dd>
+                      </div>
+                      <div className="mt-4 mb-4 flex w-full flex-none gap-x-4 px-6">
+                        <dt className="flex-none">
+                          <span className="sr-only">Status</span>
+                          <MapPinIcon
+                            className="h-6 w-5 text-yellow-700"
+                            aria-hidden="true"
+                          />
+                        </dt>
+                        <dd className="leading-6 font-semibold">
+                          PNUP, Makassar
+                        </dd>
+                      </div>
+                    </dl>
                   </div>
                 </div>
               </div>
 
+              {/* <div className="mt-4 space-y-6">
+              <p className="text-base text-gray-500">{product.description}</p>
+            </div> */}
+
               <div className="mt-10 border-t border-gray-200 pt-10 space-y-6">
                 <h3 className="text-lg font-medium text-gray-900">
                   {lang.name !== "Bahasa" ? (
-                    <>About this donation</>
+                    <>About this event</>
                   ) : (
-                    <>Tentang sumbangan ini</>
+                    <>Tentang acara ini</>
                   )}
                 </h3>
                 <p className="mt-4 text-md text-gray-500">
                   {lang.name !== "Bahasa" ? (
                     <>
-                      {" "}
-                      Stand with us in supporting dodol makers. Your
-                      contribution goes a long way in enhancing their working
-                      conditions, empowering skilled artisans, and preserving
-                      cherished traditions. Join us today and be a part of this
-                      heartwarming journey to make a sweet and lasting change.
+                      Calling all civil engineering and design students! Join us
+                      at PNUP for a volunteering event that focuses on improving
+                      the working environment for Dodol makers in Tanete
+                      village. Your expertise will make a significant impact as
+                      we work together to create safer and more comfortable
+                      spaces for these local artisans. Help us empower the Dodol
+                      makers and build a brighter future for Tanete village.
                     </>
                   ) : (
                     <>
-                      Mari bersama kami mendukung para pembuat dodol. Kontribusi
-                      Anda melakukan banyak hal dalam meningkatkan kondisi kerja
-                      mereka, memberdayakan perajin terampil, dan melestarikan
-                      kearifan lokal tradisi. Bergabunglah dengan kami hari ini
-                      dan jadilah bagian dari hal yang mengharukan ini
-                      perjalanan untuk membuat perubahan yang manis dan abadi.
+                      Memanggil semua mahasiswa teknik sipil dan desain!
+                      Bergabunglah dengan kami di PNUP untuk acara sukarela yang
+                      berfokus pada peningkatan lingkungan kerja bagi para
+                      pembuat dodol di desa Tanete. Keahlian Anda akan
+                      memberikan dampak yang signifikan saat kita bekerja sama
+                      untuk menciptakan ruang yang lebih aman dan nyaman bagi
+                      para pengrajin lokal ini. Bantu kami memberdayakan para
+                      pembuat dodol dan membangun masa depan yang lebih cerah
+                      untuk desa Tanete.
                     </>
                   )}
                 </p>
               </div>
             </section>
+            <div className="w-full mt-5 inline-flex items-center rounded-md bg-yellow-50 px-2 py-5 text-sm font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
+              <UsersIcon className="w-10 h-10 mr-5" />
+              {lang.name !== "Bahasa" ? (
+                <>16 volunteers have signed up.</>
+              ) : (
+                <>16 relawan telah mendaftar.</>
+              )}
+            </div>
           </div>
 
           {/* Product image */}
           <div className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
             <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg">
               <img
-                src={product.imageSrc}
+                src={"/civil.jpg"}
                 alt={product.imageAlt}
                 className="h-full w-full object-cover object-center"
               />
@@ -194,20 +219,20 @@ export default function Donate() {
                 className="h-full w-full object-cover object-center"
               />
             </div>
-            <div className="hidden lg:block mt-3">
+            <div className="hidden lg:block mt-8">
               <BlogCardsSm />
             </div>
           </div>
 
           {/* Product form */}
-          <div className="mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
+          <div className="mt-10 sm:mt-12 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start lg:-mt-[500px]">
             <section aria-labelledby="options-heading">
               <h2 id="options-heading" className="sr-only">
                 Product options
               </h2>
 
               <form>
-                <div className="flex mb-4">
+                <div className="flex">
                   {/* Size selector */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -225,74 +250,28 @@ export default function Donate() {
                   </svg>
                   <span className="text-gray-700">
                     {lang.name !== "Bahasa" ? (
-                      <>Donation drive ends on 30 Dec 2023, 00:00 AM</>
+                      <>Sign up before 15 Oct 2023, 00:00 AM</>
                     ) : (
-                      <>
-                        Penggalangan donasi berakhir pada 30 Des 2023, pukul
-                        00.00
-                      </>
+                      <>Daftar sebelum 15 Oct 2023, 00:00</>
                     )}
                   </span>
                 </div>
-                <div className="sm:flex sm:justify-between">
-                  {/* Size selector */}
-                  <div className="relative mt-2 rounded-md shadow-sm w-full">
-                    <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                      <span className="text-gray-500 sm:text-sm">$</span>
-                    </div>
-                    <input
-                      type="text"
-                      name="price"
-                      id="price"
-                      className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      placeholder="0.00"
-                    />
-                    <div className="absolute inset-y-0 right-0 flex items-center">
-                      <label htmlFor="currency" className="sr-only">
-                        Currency
-                      </label>
-                      <select
-                        id="currency"
-                        name="currency"
-                        className="h-full rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-                      >
-                        <option>IDR</option>
-                        <option>SGD</option>
-                        <option>USD</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                {/* <div className="mt-4">
-                <a
-                  href="#"
-                  className="group inline-flex text-sm text-gray-500 hover:text-gray-700"
-                >
-                  <span>What size should I buy?</span>
-                  <QuestionMarkCircleIcon
-                    className="ml-2 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
-                    aria-hidden="true"
-                  />
-                </a>
-              </div> */}
+
                 <div className="mt-10">
                   <button
                     type="submit"
-                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-yellow-900 px-8 py-3 text-base font-medium text-white hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-yellow-800 px-8 py-3 text-base font-medium text-white hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-50"
                   >
-                    {lang.name !== "Bahasa" ? <>Support</> : <>Mendukung</>}
+                    {lang.name !== "Bahasa" ? (
+                      <>Volunteer Now</>
+                    ) : (
+                      <>Relawan Sekarang</>
+                    )}
                   </button>
-                </div>
-                <div className="mt-10">
-                  <DonationCards />
-                </div>
-                <div className="mt-10">
-                  <ProductCard />
                 </div>
                 <div className="block lg:hidden mt-8">
                   <BlogCardsSm />
                 </div>
-
                 <div className="mt-10 border-t border-gray-200 pt-10">
                   <h3 className="text-sm font-medium text-gray-900">Share</h3>
                   <ul role="list" className="mt-4 flex items-center space-x-6">

@@ -64,6 +64,115 @@ export default function Volunteer() {
                               <div>
                                 <h4 className="font-medium text-yellow-900">
                                   {lang.name !== "Bahasa" ? (
+                                    <>
+                                      Creating a better environment for Dodol
+                                      makers
+                                    </>
+                                  ) : (
+                                    <>
+                                      Menciptakan lingkungan yang lebih baik
+                                      bagi para pembuat dodol
+                                    </>
+                                  )}
+                                </h4>
+                                <p className="mt-2 hidden text-sm text-gray-500 sm:block">
+                                  {lang.name !== "Bahasa" ? (
+                                    <>
+                                      Calling all civil engineering and design
+                                      students! Join us at PNUP for a
+                                      volunteering event that focuses on
+                                      improving the working environment for
+                                      Dodol makers in Tanete village. Your
+                                      expertise will make a significant impact
+                                      as we work together to create safer and
+                                      more comfortable spaces for these local
+                                      artisans. Help us empower the Dodol makers
+                                      and build a brighter future for Tanete
+                                      village.
+                                    </>
+                                  ) : (
+                                    <>
+                                      Memanggil semua mahasiswa teknik sipil dan
+                                      desain! Bergabunglah dengan kami di PNUP
+                                      untuk acara sukarela yang berfokus pada
+                                      peningkatan lingkungan kerja bagi para
+                                      pembuat dodol di desa Tanete. Keahlian
+                                      Anda akan memberikan dampak yang
+                                      signifikan saat kita bekerja sama untuk
+                                      menciptakan ruang yang lebih aman dan
+                                      nyaman bagi para pengrajin lokal ini.
+                                      Bantu kami memberdayakan para pembuat
+                                      dodol dan membangun masa depan yang lebih
+                                      cerah untuk desa Tanete.
+                                    </>
+                                  )}
+                                </p>
+                              </div>
+                            </div>
+                            <div className="mt-5 flex text-sm font-medium sm:mt-4">
+                              <span className="text-yellow-800 ">
+                                {lang.name !== "Bahasa" ? (
+                                  <>Thu, 16 Oct 2023</>
+                                ) : (
+                                  <>Kamis, 16 Oct 2023</>
+                                )}
+                              </span>
+                              <div className="ml-4 border-l border-gray-200 pl-4 sm:ml-6 sm:pl-6">
+                                <span className="text-yellow-800">
+                                  6:00AM - 6:00PM
+                                </span>
+                              </div>
+                              <div className="ml-4 border-l border-gray-200 pl-4 sm:ml-6 sm:pl-6">
+                                <span className="text-yellow-800">
+                                  PNUP, Makassar
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="mt-6 font-medium">
+                            <Link
+                              href="/volunteer/civil"
+                              className="text-yellow-950 hover:text-yellow-600"
+                            >
+                              {lang.name !== "Bahasa" ? (
+                                <>Learn More</>
+                              ) : (
+                                <>Lihad slengkapnya</>
+                              )}{" "}
+                              →
+                            </Link>
+                          </div>
+                        </div>
+                        <div className="ml-4 flex-shrink-0 sm:order-first sm:m-0 sm:mr-6">
+                          <img
+                            src={"civil.jpg"}
+                            className="col-start-2 col-end-3 h-20 w-20 rounded-lg object-cover object-center sm:col-start-1 sm:row-span-2 sm:row-start-1 sm:h-40 sm:w-40 lg:h-52 lg:w-52"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative mt-5">
+                <div
+                  className="absolute inset-0 flex items-center"
+                  aria-hidden="true"
+                >
+                  <div className="w-full border-t border-gray-300" />
+                </div>
+              </div>
+              <div className="space-y-16 sm:space-y-24">
+                <div>
+                  <div className="mt-10 flow-root px-4 sm:mt-10 sm:px-0">
+                    <div className="-my-6 divide-y divide-gray-200 sm:-my-10">
+                      <div className="flex py-6 sm:py-10">
+                        <div className="min-w-0 flex-1 lg:flex lg:flex-col">
+                          <div className="lg:flex-1">
+                            <div className="sm:flex">
+                              <div>
+                                <h4 className="font-medium text-yellow-900">
+                                  {lang.name !== "Bahasa" ? (
                                     <>Helping out at Tanete village</>
                                   ) : (
                                     <>Membantu di desa Tanete</>

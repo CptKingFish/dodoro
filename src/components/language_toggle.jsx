@@ -1,4 +1,4 @@
-import { Fragment, useContext, useState } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import { LangContext } from "@/pages/_app";
@@ -14,8 +14,18 @@ function classNames(...classes) {
 
 export default function LanguageToggle() {
   const { lang, setLang } = useContext(LangContext);
+
+  const onChange = (lang) => {
+    setLang(lang);
+    localStorage.setItem("lang", lang.name);
+  };
+
+  // useEffect(() => {
+  //   localStorage.setItem("lang", lang.name);
+  // }, [lang]);
+
   return (
-    <Listbox value={lang} onChange={setLang}>
+    <Listbox value={lang} onChange={onChange}>
       {({ open }) => (
         <>
           {/* <Listbox.Label className="block text-sm font-medium leading-6 text-gray-900">

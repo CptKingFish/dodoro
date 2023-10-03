@@ -24,7 +24,7 @@ export default function Hero() {
 
             <div className="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
               <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
-                <h1 className="text-4xl font-bold tracking-tight text-yellow-900 sm:text-6xl mb-3">
+                <h1 className="font-serif text-4xl font-light tracking-tight text-yellow-900 sm:text-6xl mb-3">
                   Middle,
                 </h1>
                 <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -56,19 +56,9 @@ export default function Hero() {
                   )}
                 </p>
                 <div className="mt-10 flex items-center gap-x-6">
-                  <a
-                    href="#"
-                    className="rounded-md bg-yellow-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
-                  >
-                    {lang.name !== "Bahasa" ? (
-                      <>Watch video</>
-                    ) : (
-                      <>Tonton video</>
-                    )}
-                  </a>
                   <Link
                     href="/about"
-                    className="text-sm font-semibold leading-6 text-gray-900"
+                    className="rounded-md bg-yellow-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
                   >
                     {lang.name !== "Bahasa" ? (
                       <>Learn more</>
@@ -85,7 +75,7 @@ export default function Hero() {
         <div className="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
           <img
             className="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full"
-            src="ibu.png"
+            src="we.jpg"
             alt=""
           />
         </div>

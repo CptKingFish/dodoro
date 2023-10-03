@@ -130,7 +130,7 @@ export default function Support() {
                         </div>
                         <div className="ml-4 flex-shrink-0 sm:order-first sm:m-0 sm:mr-6">
                           <img
-                            src={"ibu.png"}
+                            src={"ibus.jpg"}
                             className="col-start-2 col-end-3 h-20 w-20 rounded-lg object-cover object-center sm:col-start-1 sm:row-span-2 sm:row-start-1 sm:h-40 sm:w-40 lg:h-52 lg:w-52"
                           />
                         </div>
