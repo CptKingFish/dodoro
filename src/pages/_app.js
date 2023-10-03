@@ -10,7 +10,7 @@ const languages = [
 ];
 
 export default function App({ Component, pageProps }) {
-  const [lang, setLang] = useState(languages[0]);
+  const [lang, setLang] = useState(languages[1]);
 
   // on first render, check if there's a saved language in localStorage
   useEffect(() => {
