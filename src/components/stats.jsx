@@ -26,7 +26,7 @@ const stats = [
   {
     id: 3,
     name: "Volunteer signups",
-    nameB: "Pendaftaran sukarelawan",
+    nameB: "Pendaftar sukarelawan",
     value: "3,000+",
     icon: UsersIcon,
   },

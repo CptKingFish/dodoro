@@ -137,7 +137,7 @@ export default function Volunteer() {
                               {lang.name !== "Bahasa" ? (
                                 <>Learn More</>
                               ) : (
-                                <>Lihad slengkapnya</>
+                                <>Selengkapnya</>
                               )}{" "}
                               →
                             </Link>
@@ -235,7 +235,7 @@ export default function Volunteer() {
                               {lang.name !== "Bahasa" ? (
                                 <>Learn More</>
                               ) : (
-                                <>Lihad slengkapnya</>
+                                <>Selengkapnya</>
                               )}{" "}
                               →
                             </Link>
