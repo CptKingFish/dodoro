@@ -161,14 +161,14 @@ export default function VolunteerCivil() {
             </div> */}
 
               <div className="mt-10 border-t border-gray-200 pt-10 space-y-6">
-                <h3 className="text-lg font-medium text-gray-900">
+                <h3 className="text-xl font-medium text-gray-900">
                   {lang.name !== "Bahasa" ? (
                     <>About this event</>
                   ) : (
                     <>Tentang acara ini</>
                   )}
                 </h3>
-                <p className="mt-4 text-md text-gray-500">
+                <p className="mt-4 text-lg text-gray-800">
                   {lang.name !== "Bahasa" ? (
                     <>
                       Calling all civil engineering and design students! Join us
@@ -193,10 +193,67 @@ export default function VolunteerCivil() {
                     </>
                   )}
                 </p>
+                <div className="mt-4 text-lg text-gray-800">
+                  {lang.name !== "Bahasa" ? (
+                    <>
+                      <span className="font-semibold">How you can help</span>
+                      <ul className="list-disc mt-2">
+                        <li>
+                          Evaluate and redesign workspaces for optimal safety
+                          and efficiency for Dodol makers.
+                        </li>
+                        <li>
+                          Apply civil engineering knowledge to enhance
+                          structural integrity and functionality of artisan
+                          spaces.
+                        </li>
+                        <li>
+                          Collaborate with local artisans to understand their
+                          specific needs and incorporate design solutions.
+                        </li>
+                        <li>
+                          Implement design improvements to provide more
+                          comfortable and ergonomic working conditions for the
+                          Dodol makers.
+                        </li>
+                      </ul>
+                    </>
+                  ) : (
+                    <>
+                      <>
+                        <span className="font-semibold">
+                          Bagaimana Anda dapat membantu
+                        </span>
+                        <ul className="list-disc mt-2">
+                          <li>
+                            Mengevaluasi dan mendesain ulang ruang kerja untuk
+                            keselamatan yang optimal dan efisiensi bagi pembuat
+                            dodol.
+                          </li>
+                          <li>
+                            Menerapkan pengetahuan teknik sipil untuk
+                            meningkatkan integritas struktural dan
+                            fungsionalitas pengrajin ruang.
+                          </li>
+                          <li>
+                            Berkolaborasi dengan pengrajin lokal untuk memahami
+                            kebutuhan spesifik mereka dan menggabungkan solusi
+                            desain.
+                          </li>
+                          <li>
+                            Menerapkan peningkatan desain untuk menyediakan
+                            lebih banyak kondisi kerja yang lebih nyaman dan
+                            ergonomis bagi para Pembuat dodol.
+                          </li>
+                        </ul>
+                      </>
+                    </>
+                  )}
+                </div>
               </div>
             </section>
 
-            <div className="w-full mt-5 inline-flex items-center rounded-md bg-yellow-50 px-2 py-5 text-sm font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
+            <div className="w-full mt-5 inline-flex items-center rounded-md bg-yellow-50 px-2 py-5 text-md font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
               <UsersIcon className="w-10 h-10 mr-5" />
               {lang.name !== "Bahasa" ? (
                 <>16 volunteers have signed up.</>
@@ -204,9 +261,9 @@ export default function VolunteerCivil() {
                 <>16 relawan telah mendaftar.</>
               )}
             </div>
-            <div className="mt-10 pt-10">
+            {/* <div className="mt-10 pt-10">
               <YouTubePlayer videoId={"fjM0wD3y9Bw"} />
-            </div>
+            </div> */}
           </div>
 
           {/* Product image */}
@@ -230,7 +287,7 @@ export default function VolunteerCivil() {
           </div>
 
           {/* Product form */}
-          <div className="mt-10 sm:mt-12 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start lg:-mt-[300px]">
+          <div className="mt-10 sm:mt-12 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start lg:-mt-[400px]">
             <section aria-labelledby="options-heading">
               <h2 id="options-heading" className="sr-only">
                 Product options

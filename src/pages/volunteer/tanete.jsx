@@ -103,14 +103,14 @@ export default function VolunteerTanete() {
             </div> */}
 
               <div className="mt-10 border-t border-gray-200 pt-10 space-y-6">
-                <h3 className="text-lg font-medium text-gray-900">
+                <h3 className="text-xl font-medium text-gray-900">
                   {lang.name !== "Bahasa" ? (
                     <>About this event</>
                   ) : (
                     <>Tentang acara ini</>
                   )}
                 </h3>
-                <p className="mt-4 text-md text-gray-500">
+                <p className="mt-4 text-lg text-gray-800">
                   {lang.name !== "Bahasa" ? (
                     <>
                       Join us in the beautiful Tanete Village for a heartwarming
@@ -133,9 +133,55 @@ export default function VolunteerTanete() {
                     </>
                   )}
                 </p>
+                <div className="mt-4 text-lg text-gray-800">
+                  {lang.name !== "Bahasa" ? (
+                    <>
+                      <span className="font-semibold">How you can help</span>
+                      <ul className="list-disc mt-2">
+                        <li>
+                          Partner with local dodol makers to share skills and
+                          resources.
+                        </li>
+                        <li>
+                          Work hands-on to refine their craft and production
+                          methods.
+                        </li>
+                        <li>
+                          Contribute to improving their overall livelihoods,
+                          leaving a lasting impact on the Tanete Village
+                          community.
+                        </li>
+                      </ul>
+                    </>
+                  ) : (
+                    <>
+                      <>
+                        <span className="font-semibold">
+                          Bagaimana Anda dapat membantu
+                        </span>
+                        <ul className="list-disc mt-2">
+                          <li>
+                            Bermitra dengan pembuat dodol lokal untuk berbagi
+                            keterampilan dan sumber daya.
+                          </li>
+                          <li>
+                            Bekerja secara langsung untuk menyempurnakan
+                            kerajinan dan produksi mereka metode.
+                          </li>
+                          <li>
+                            Berkontribusi untuk meningkatkan mata pencaharian
+                            mereka secara keseluruhan, meninggalkan dampak yang
+                            berkelanjutan bagi masyarakat Desa Tanete Desa
+                            Tanete.
+                          </li>
+                        </ul>
+                      </>
+                    </>
+                  )}
+                </div>
               </div>
             </section>
-            <div className="w-full mt-5 inline-flex items-center rounded-md bg-yellow-50 px-2 py-5 text-sm font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
+            <div className="w-full mt-5 inline-flex items-center rounded-md bg-yellow-50 px-2 py-5 text-md font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
               <UsersIcon className="w-10 h-10 mr-5" />
               {lang.name !== "Bahasa" ? (
                 <>24 volunteers have signed up.</>
@@ -202,7 +248,7 @@ export default function VolunteerTanete() {
           </div>
 
           {/* Product form */}
-          <div className="mt-10 sm:mt-12 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start lg:-mt-[500px]">
+          <div className="mt-10 sm:mt-12 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start lg:-mt-[400px]">
             <section aria-labelledby="options-heading">
               <h2 id="options-heading" className="sr-only">
                 Product options

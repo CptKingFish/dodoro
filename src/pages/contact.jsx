@@ -44,14 +44,14 @@ export default function Contact() {
                       <dt className="sr-only">Email</dt>
                       <dd>
                         <span className="font-semibold text-yellow-600">
-                          @mace&apos;s Dodoro
+                          @middle.fb
                         </span>
                       </dd>
                     </div>
-                    <div className="mt-1">
+                    {/* <div className="mt-1">
                       <dt className="sr-only">Phone number</dt>
                       <dd>+1 (555) 905-2345</dd>
-                    </div>
+                    </div> */}
                   </dl>
                 </div>
                 <div className="rounded-2xl bg-gray-50 p-10">
@@ -63,14 +63,14 @@ export default function Contact() {
                       <dt className="sr-only">Email</dt>
                       <dd>
                         <span className="font-semibold text-yellow-600">
-                          @maces.dodoro
+                          @middle.insta
                         </span>
                       </dd>
                     </div>
-                    <div className="mt-1">
+                    {/* <div className="mt-1">
                       <dt className="sr-only">Phone number</dt>
                       <dd>+1 (555) 905-3456</dd>
-                    </div>
+                    </div> */}
                   </dl>
                 </div>
                 <div className="rounded-2xl bg-gray-50 p-10">

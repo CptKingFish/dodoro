@@ -96,9 +96,9 @@ export default function BlogDodol() {
                   </figcaption>
                 </figure>
               </div>
-              <div className="mt-10 pt-10">
+              {/* <div className="mt-10 pt-10">
                 <YouTubePlayer videoId={"fjM0wD3y9Bw"} />
-              </div>
+              </div> */}
             </div>
             <div className="mt-8 lg:mt-0">
               <span className="mt-2 text-2xl font-bold tracking-tight text-yellow-900">
